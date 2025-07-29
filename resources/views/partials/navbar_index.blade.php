@@ -92,7 +92,7 @@
                 <p class="mt-3 mb-4 text-secondary">
                     نلتزم في الصناعات الصحية بتقديم منتجات آمنة وموثوقة تلبي أعلى معايير الجودة العالمية،
                     لنضمن راحة وصحة أطفالكم في كل لحظة.
-                </p>
+                </p> 
                 <button class="btn text-white rounded-4 px-5 fw-bold"
                         style="background-color: #2b3b6b; font-size: 1.5rem; font-weight: 900;">
                     أكتشف منتجاتنا
