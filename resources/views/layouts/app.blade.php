@@ -17,7 +17,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    $@include('partials.navbar')
+    @include('partials.navbar')
 
     <main class="py-0">
         @yield('content')
