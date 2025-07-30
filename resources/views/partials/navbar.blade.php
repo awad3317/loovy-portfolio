@@ -3,7 +3,7 @@
          <a class="ms-0 justify-content-start" href="#" style="z-index: 1050;">
                 <img src="{{asset('images/logo.png')}}" alt="شعار الشركة" width="100">
         </a>
-        <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navContent">
+        <div class="collapse navbar-collapse justify-content-center d-none d-l-flex" id="navContent">
             <ul class="navbar-nav d-flex flex-row gap-5 rounded-5 px-5 py-3" style="
                 background-color: rgba(43, 59, 107, 0.85); 
                 backdrop-filter: blur(8px); 
