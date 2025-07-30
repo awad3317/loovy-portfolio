@@ -7,8 +7,8 @@
     position: relative;
 ">
 <nav class="navbar navbar-expand-lg  fixed-lg-bottom">
-    <div class="container ">
-         <a class="ms-0 justify-content-start" href="#" style="z-index: 1050;">
+    <div class="container-fluid d-flex  align-items-center">
+         <a class="ms-4 justify-content-start" href="#" style="z-index: 1050;">
                 <img src="{{asset('images/logo.png')}}" alt="شعار الشركة" width="100">
         </a>
         <div class="collapse navbar-collapse justify-content-center d-none d-l-flex" id="navContent">
@@ -38,7 +38,7 @@
             </ul>
         </div>
         
-        <div class="d-lg-none fixed-bottom py-2 px-2"> <!-- تقليل الـ padding -->
+        <div class="d-lg-none fixed-bottom py-2 px-2">
     <div class="container">
         <ul class="nav justify-content-between rounded-5 px-2 py-1" style="
                 background-color: rgba(43, 59, 107, 0.85); 
@@ -88,17 +88,19 @@
     <!-- المحتوى الرئيسي -->
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 intro-text">
-                <h4 class="fw-bold text-dark">شركة المصنع الأول للصناعات الصحية المحدودة</h4>
-                <p class="mt-3 mb-4 text-secondary">
-                    نلتزم في الصناعات الصحية بتقديم منتجات آمنة وموثوقة تلبي أعلى معايير الجودة العالمية،
-                    لنضمن راحة وصحة أطفالكم في كل لحظة.
-                </p> 
-                <button class="btn text-white rounded-4 px-5 fw-bold"
-                        style="background-color: #2b3b6b; font-size: 1.5rem; font-weight: 900;">
-                    أكتشف منتجاتنا
-                </button>
-            </div>
+            <div class="col-lg-6 intro-text text-lg-start text-center">
+    <h4 class="fw-bold text-dark">شركة المصنع الأول للصناعات الصحية المحدودة</h4>
+    <p class="mt-3 mb-4 text-secondary">
+        نلتزم في الصناعات الصحية بتقديم منتجات آمنة وموثوقة تلبي أعلى معايير الجودة العالمية،
+        لنضمن راحة وصحة أطفالكم في كل لحظة.
+    </p> 
+    <div class="d-lg-block d-flex justify-content-center">
+        <button class="btn text-white rounded-4 px-5 fw-bold"
+                style="background-color: #2b3b6b; font-size: 1.5rem; font-weight: 900;">
+            أكتشف منتجاتنا
+        </button>
+    </div>
+</div>
             <div class="col-lg-6 text-center intro-image">
                 <img src="{{ asset('images/lofy1.png') }}" alt="صورة المنتجات" class="img-fluid" >
             </div>

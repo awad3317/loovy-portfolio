@@ -2,21 +2,21 @@ body {
         padding-bottom: 60px;
     }
     
-    /* تنسيق البوتوم نافبار */
+    
 .fixed-bottom {
         z-index: 1030;
     }
     
-    /* تنسيق الأيقونات */
+    
 .nav-link i {
         font-size: 1.2rem;
     }
     
-    /* تنسيق النص تحت الأيقونات */
+    
 .nav-link small {
         font-size: 0.7rem;
     }
-/* Desktop Hover Effects */
+
 .navbar-nav.d-flex.flex-row.gap-5 .nav-link {
     position: relative;
     transition: all 0.3s ease;
@@ -42,7 +42,7 @@ body {
     width: 100%;
 }
 
-/* Mobile Hover Effects */
+
 .nav.justify-content-between  .nav-link {
     transition: all 0.3s ease;
     border-radius: 10px;
