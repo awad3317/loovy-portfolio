@@ -30,11 +30,11 @@
             </ul>
         </div>
         
-        <div class="d-lg-none fixed-bottom py-3 px-3">
+        <div class="d-lg-none fixed-bottom py-4 px-3">
             <div class="container">
-                <ul class="nav justify-content-between rounded-5 p-2 mx-auto" style="
+            <ul class="nav justify-content-between rounded-5 px-4 py-1" style="
                     background-color: rgba(43, 59, 107, 0.85); 
-                    backdrop-filter: blur(8px); 
+                    backdrop-filter: blur(5px); 
                     max-width: 95%;
                     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                     border: 1px solid rgba(255,255,255,0.1); 
@@ -70,7 +70,6 @@
                 </a>
             </li>
         </ul>
-        
     </div>
     
 </div>

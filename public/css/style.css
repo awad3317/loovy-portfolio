@@ -43,22 +43,22 @@ body {
 }
 
 /* Mobile Hover Effects */
-.nav.justify-content-between .nav-link {
+.nav.justify-content-between  .nav-link {
     transition: all 0.3s ease;
     border-radius: 10px;
     padding: 8px 12px !important;
 }
 
-.nav.justify-content-between .nav-link:hover {
+.nav.justify-content-between  .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
 }
 
-.nav.justify-content-between .nav-link:hover i {
+.nav.justify-content-between  .nav-link:hover i {
     color: #f8f9fa !important;
 }
 
-.nav.justify-content-between .nav-link:hover small {
+.nav.justify-content-between  .nav-link:hover small {
     color: #f8f9fa !important;
     font-weight: bold;
 }
