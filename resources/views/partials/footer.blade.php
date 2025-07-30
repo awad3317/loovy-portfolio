@@ -1,4 +1,4 @@
-<footer class="bg-dark-blue text-white pt-5 pb-3 mb-md-0 mb-s-4 mb-xs-2" style="background-color: #243b6f;">
+<footer class="bg-dark-blue text-white pt-5 pb-3" style="background-color: #243b6f;">
     <div class="container">
         <div class="row">
             <!-- العمود 1: معلومات الشركة -->
