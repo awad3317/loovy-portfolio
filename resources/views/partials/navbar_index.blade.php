@@ -8,7 +8,7 @@
 ">
 <nav class="navbar navbar-expand-lg  fixed-lg-bottom">
     <div class="container-fluid d-flex  align-items-center">
-         <a class="ms-4 justify-content-start" href="#" style="z-index: 1050;">
+         <a class="ms-1 justify-content-start" href="#" style="z-index: 1050;">
                 <img src="{{asset('images/logo.png')}}" alt="شعار الشركة" width="100">
         </a>
         <div class="collapse navbar-collapse justify-content-center d-none d-l-flex" id="navContent">
@@ -37,13 +37,16 @@
                 </li>
             </ul>
         </div>
+        <a class="me-1 justify-content-start" href="#" style="z-index: 1050;">
+                <img src="{{asset('images/search.png')}}" alt="شعار الشركة" width="40">
+        </a>
         
         <div class="d-lg-none fixed-bottom py-2 px-2">
     <div class="container">
         <ul class="nav justify-content-between rounded-5 px-2 py-1" style="
                 background-color: rgba(43, 59, 107, 0.85); 
                 backdrop-filter: blur(5px); 
-                max-width: 95%;
+                max-width: 100%;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                 border: 1px solid rgba(255,255,255,0.1); 
             ">
