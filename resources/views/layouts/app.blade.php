@@ -17,7 +17,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    @include('partials.navbar')
+    
 
     <main class="py-0">
         @yield('content')
@@ -31,6 +31,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     
     <!-- Custom JS -->
-    {{-- <script src="{{ asset('js/main.js') }}"></script> --}}
+    <!-- {{-- <script src="{{ asset('js/main.js') }}"></script> --}} -->
 </body>
 </html>
