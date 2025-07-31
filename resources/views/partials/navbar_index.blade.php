@@ -15,10 +15,10 @@
             <ul class="navbar-nav d-flex flex-row gap-5 rounded-5 px-5 py-3" style="
                 background-color: rgba(43, 59, 107, 0.85); 
                 backdrop-filter: blur(8px); 
+                width: auto;
                 max-width: 95%;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-                border: 1px solid rgba(255,255,255,0.1);
-                min-width: 60%">
+                border: 1px solid rgba(255,255,255,0.1);">
                
                 <li class="nav-item px-1">
                     <a class="nav-link text-white fw-semibold fs-5" href="#">الرئيسية</a>
@@ -88,8 +88,8 @@
         
 </nav>
   
-    <!-- المحتوى الرئيسي -->
-    <div class="container">
+    
+    <div class="container mt-5">
         <div class="row align-items-center">
             <div class="col-lg-6 intro-text text-lg-start text-center">
     <h4 class="fw-bold text-dark">شركة المصنع الأول للصناعات الصحية المحدودة</h4>
