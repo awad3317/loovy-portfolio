@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <style>
+  .preloader {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .2s, opacity .2s;
+  }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') |شركة المصنع الأول للصناعات الصحية المحدودة</title>
@@ -36,6 +43,12 @@
     duration: 800,
     easing: 'ease-in-out', 
     once: true 
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.preloader').style.visibility = 'visible';
+    document.querySelector('.preloader').style.opacity = 1;
   });
 </script>
     
