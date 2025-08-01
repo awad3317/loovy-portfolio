@@ -16,6 +16,7 @@
     <!-- Custom CSS -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer-style.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     

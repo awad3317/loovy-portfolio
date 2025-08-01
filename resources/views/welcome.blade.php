@@ -67,7 +67,7 @@
                     <div class="card shadow-sm h-100 border-0 rounded-4">
                         <div class="mx-auto mt-4 d-flex justify-content-center align-items-center "
                              style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: #f3f4f9">
-                            <img src="{{asset('images/Frame811649.png')}}" alt="" srcset="">
+                            <img src="{{asset('images/hugeicons_test-tube-01.png')}}" alt="" srcset="">
                         </div>
                         <div class="card-body text-center">
                             <h5 class="card-title fw-semibold">الإبتكار والتطوير المستمر</h5>
@@ -109,7 +109,7 @@
                     <div class="card shadow-sm h-100 border-0 rounded-4">
                         <div class="mx-auto mt-4 d-flex justify-content-center align-items-center "
                              style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: #f3f4f9">
-                            <i class="fa-solid fa-key"></i>
+                            <img src="{{asset('images/fluent_control-button-20-regular.png')}}" alt="" srcset="">
                         </div>
                         <div class="card-body text-center">
                             <h5 class="card-title fw-semibold">التحكم الذكي في العمليات</h5>
@@ -119,6 +119,83 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="fw-bold mb-2" style="display: inline-block; border-bottom: 3px solid #253E69B2; padding-bottom: 5px;">
+                    منتجاتنا
+                </h3>
+                <h6 class="text-muted mt-3">
+                    نقدم مجموعة متنوعة من المنتجات الصحية عالية الجودة للأطفال من مختلف الفئات العمرية
+                </h6>
+            </div>
+
+            <div class="row justify-content-center my-4 text-center">
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <button class="custom-btn btn btn-outline-light w-100 text-black border rounded-3 py-2 px-3 fw-semibold"
+                            style="transition: 0.3s; font-size: 1.5rem; font-weight: 900; font-size: 1.5rem; font-weight: 900;">
+                        جميع المنتجات
+                    </button>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <button class="custom-btn btn btn-outline-light w-100 text-black border rounded-3 py-2 px-3 fw-semibold"
+                            style="transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
+                        منتج لوفي بيبي
+                    </button>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <button class="custom-btn btn btn-outline-light w-auto text-black border rounded-3 py-2 px-3 fw-semibold"
+                            style="transition: 0.3s; font-size: 1.4rem; font-weight: 900;">
+                        منتج كالمي بيبي
+                    </button>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <select class="custom-select form-select text-black border fw-semibold rounded-3 py-2 px-3"
+                            style="border: 1.5px solid #fff; background-color: transparent; transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
+                        <option selected disabled>المقاسات</option>
+                        <option value="small">صغير</option>
+                        <option value="medium">متوسط</option>
+                        <option value="large">كبير</option>
+                        <option value="x_large">كبير جداً</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="row g-4 justify-content-center">
+                @foreach ([1,2,3,4,5] as $index)
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                            <img src="{{ asset('images/lofy' . (($index % 2 == 0) ? 4 : 3) . '.jpg') }}"
+                                 class="card-img-top mx-auto rounded-top"
+                                 alt="منتج"
+                                 style="width: 100%; height: 250px; object-fit: cover;">
+
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold mb-2">حفاضات حديثي الولادة</h5>
+                                <p class="card-text text-muted small">
+                                    حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة، توفر امتصاصاً ممتازاً مع حماية للبشرة الحساسة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <button class="btn text-white rounded-3 px-5 py-3 fw-semibold"
+                        style="background-color: #2b3b6b; transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
+                    عرض جميع المنتجات
+                </button>
             </div>
         </div>
     </section>
