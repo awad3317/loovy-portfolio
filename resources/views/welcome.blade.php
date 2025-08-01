@@ -188,12 +188,12 @@
 
 
             <div class="row g-4 justify-content-center">
-                @foreach ([1, 2, 3, 4, 5] as $index)
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-                            <img src="{{ asset('images/lofy' . ($index % 2 == 0 ? 4 : 3) . '.jpg') }}"
-                                class="card-img-top mx-auto rounded-top" alt="منتج"
-                                style="width: 100%; height: 250px; object-fit: cover;">
+                           <img src="{{ asset('images/lofy4.jpg') }}"
+                                class="card-img-top mx-auto rounded-top img-fluid" 
+                                alt="منتج"
+                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
 
                             <div class="card-body">
                                 <h5 class="card-title fw-bold mb-2">حفاضات حديثي الولادة</h5>
@@ -204,7 +204,75 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+
+                     <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                            <img src="{{ asset('images/lofy4.jpg') }}"
+                                class="card-img-top mx-auto rounded-top img-fluid" 
+                                alt="منتج"
+                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
+
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold mb-2">حفاضات حديثي الولادة</h5>
+                                <p class="card-text text-muted small">
+                                    حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة، توفر امتصاصاً ممتازاً مع حماية
+                                    للبشرة الحساسة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                            <img src="{{ asset('images/lofy4.jpg') }}"
+                                class="card-img-top mx-auto rounded-top img-fluid" 
+                                alt="منتج"
+                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
+
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold mb-2">حفاضات حديثي الولادة</h5>
+                                <p class="card-text text-muted small">
+                                    حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة، توفر امتصاصاً ممتازاً مع حماية
+                                    للبشرة الحساسة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                            <img src="{{ asset('images/lofy4.jpg') }}"
+                                class="card-img-top mx-auto rounded-top img-fluid" 
+                                alt="منتج"
+                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
+
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold mb-2">حفاضات حديثي الولادة</h5>
+                                <p class="card-text text-muted small">
+                                    حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة، توفر امتصاصاً ممتازاً مع حماية
+                                    للبشرة الحساسة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                           <img src="{{ asset('images/lofy4.jpg') }}"
+                                class="card-img-top mx-auto rounded-top img-fluid" 
+                                alt="منتج"
+                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold mb-2">حفاضات حديثي الولادة</h5>
+                                <p class="card-text text-muted small">
+                                    حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة، توفر امتصاصاً ممتازاً مع حماية
+                                    للبشرة الحساسة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
             </div>
 
             <div class="d-flex justify-content-center mt-5">
