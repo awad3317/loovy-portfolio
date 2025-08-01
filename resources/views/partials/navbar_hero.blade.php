@@ -59,7 +59,7 @@
             <li class="nav-item" style="flex: 1; min-width: 0;">
                 <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);">
                     <i class="fas fa-info-circle d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
-                    <small>عن الشركة</small>
+                    <small>عننا</small>
                 </a>
             </li>
             <li class="nav-item" style="flex: 1; min-width: 0;">
