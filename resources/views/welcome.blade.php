@@ -17,8 +17,8 @@
                 </h4>
             </div>
             <div class="row align-items-center g-4">
-                <div class="col-lg-6 mb-4">
-                    <h3 class="fw-bold mb-4 text-lg-start text-center"" style="font-family: 'Tajawal', sans-serif;">شركة
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <h3 class="fw-bold mb-4 text-lg-start text-center" style="font-family: 'Tajawal', sans-serif;">شركة
                         المصنع الأول للصناعات الصحية المحدودة</h3>
                     <div class="about-content">
                         <p class="lead text-muted mb-4 " style="line-height: 1.8; text-align: justify;">
@@ -33,7 +33,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right">
                     <div class="about-image shadow-lg rounded overflow-hidden">
                         <img src="{{ asset('images/lofy2.jpg') }}" alt="صورة منتجات لوفي بيبي" class="img-fluid w-100"
                             style="max-height: 500px; object-fit: cover;">
@@ -43,9 +43,9 @@
         </div>
     </section>
 
-    <section class="py-1 mb-4">
+    <section class="py-1 mb-4" data-aos="fade-up">
         <div class="container">
-            <div class="text-center mb-4">
+            <div class="text-center mb-4"data-aos="fade-up">
                 <h3 class="fw-bold mb-2"
                     style="display: inline-block; border-bottom: 3px solid #253E69B2; padding-bottom: 5px;">
                     حلولنا الصناعية
@@ -56,7 +56,7 @@
             </div>
 
             <div class="row gy-4">
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card shadow-sm h-100 border-0 rounded-4">
                         <div class="mx-auto mt-4 d-flex justify-content-center align-items-center"
                             style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: #f3f4f9">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card shadow-sm h-100 border-0 rounded-4">
                         <div class="mx-auto mt-4 d-flex justify-content-center align-items-center "
                             style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: #f3f4f9">
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card shadow-sm h-100 border-0 rounded-4">
                         <div class="mx-auto mt-4 d-flex justify-content-center align-items-center "
                             style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: #f3f4f9">
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card shadow-sm h-100 border-0 rounded-4">
                         <div class="mx-auto mt-4 d-flex justify-content-center align-items-center "
                             style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: #f3f4f9">
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card shadow-sm h-100 border-0 rounded-4">
                         <div class="mx-auto mt-4 d-flex justify-content-center align-items-center "
                             style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: #f3f4f9">
@@ -136,9 +136,9 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-5" data-aos="fade-up">
         <div class="container">
-            <div class="text-center">
+            <div class="text-center" data-aos="fade-up">
                 <h3 class="fw-bold mb-2"
                     style="display: inline-block; border-bottom: 3px solid #253E69B2; padding-bottom: 5px;">
                     منتجاتنا
@@ -148,7 +148,7 @@
                 </h6>
             </div>
 
-            <div class="d-flex flex-wrap justify-content-center gap-2 my-4 text-center text-sm-start">
+            <div class="d-flex flex-wrap justify-content-center gap-2 my-4 text-center text-sm-start" data-aos="fade-up">
 
                 <div style="min-width: 150px; flex: 1 1 auto;">
                     <button class="btn btn-outline-light text-black border rounded-3 py-2 px-3 w-100 fw-semibold"
@@ -184,11 +184,8 @@
 
             </div>
 
-
-
-
             <div class="row g-4 justify-content-center">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                            <img src="{{ asset('images/lofy4.jpg') }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" 
@@ -205,7 +202,7 @@
                         </div>
                     </div>
 
-                     <div class="col-sm-6 col-md-4 col-lg-3">
+                     <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                             <img src="{{ asset('images/lofy4.jpg') }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" 
@@ -222,7 +219,7 @@
                         </div>
                     </div>
 
-                     <div class="col-sm-6 col-md-4 col-lg-3">
+                     <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                             <img src="{{ asset('images/lofy4.jpg') }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" 
@@ -239,7 +236,7 @@
                         </div>
                     </div>
 
-                     <div class="col-sm-6 col-md-4 col-lg-3">
+                     <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                             <img src="{{ asset('images/lofy4.jpg') }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" 
@@ -256,7 +253,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="500">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                            <img src="{{ asset('images/lofy4.jpg') }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" 
@@ -280,6 +277,71 @@
                     style="background-color: #2b3b6b; transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
                     عرض جميع المنتجات
                 </button>
+            </div>
+        </div>
+    </section>
+
+     <section class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h3 class="fw-bold mb-2" style="display: inline-block; border-bottom: 3px solid #253E69B2; padding-bottom: 5px;">
+                    الجودة والشهادات
+                </h3>
+                <h6 class="text-muted mt-3">
+                    نلتزم بأعلى معايير الجودة والسلامة في جميع منتجاتنا، وقد حصلنا على العديد من الشهادات والاعتمادات الدولية
+                </h6>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 text-center" data-aos="fade-right">
+                    <img src="{{ asset('images/lofy2.jpg') }}" alt="صورة المنتجات"
+                         class="img-fluid rounded-4 shadow-sm" style="max-height: 400px; object-fit: cover;width: 100%;">
+                </div>
+                <div class="col-lg-6"  data-aos="fade-left">
+                    <div class="d-flex flex-column gap-3">
+                            <div class="card border-0 shadow-sm rounded-4 px-3 py-3"  data-aos="fade-up" data-aos-delay="100">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-light   rounded-circle d-flex justify-content-center align-items-center"
+                                         style="width: 60px; height: 60px; font-size: 28px;">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
+                                        <p class="text-muted mb-0 small">
+                                            حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 shadow-sm rounded-4 px-3 py-3"  data-aos="fade-up" data-aos-delay="200">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-light   rounded-circle d-flex justify-content-center align-items-center"
+                                         style="width: 60px; height: 60px; font-size: 28px;">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
+                                        <p class="text-muted mb-0 small">
+                                            حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="card border-0 shadow-sm rounded-4 px-3 py-3"  data-aos="fade-up" data-aos-delay="300">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-light   rounded-circle d-flex justify-content-center align-items-center"
+                                         style="width: 60px; height: 60px; font-size: 28px;">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
+                                        <p class="text-muted mb-0 small">
+                                            حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
