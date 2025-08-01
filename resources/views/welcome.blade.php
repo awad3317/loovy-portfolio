@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    
+
     <section class="py-1">
         <div class="container py-5">
             <div class="text-center mb-5">
@@ -148,32 +148,32 @@
                 </h6>
             </div>
 
-            <div class="row justify-content-center my-4 text-center text-sm-start">
+            <div class="d-flex flex-wrap justify-content-center gap-2 my-4 text-center text-sm-start">
 
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <button class="custom-btn btn btn-outline-light w-100 text-black border rounded-3 py-2 px-3 fw-semibold"
-                        style="transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
+                <div style="min-width: 150px; flex: 1 1 auto;">
+                    <button class="btn btn-outline-light text-black border rounded-3 py-2 px-3 w-100 fw-semibold"
+                        style="font-size: 1.3rem; font-weight: 900;">
                         جميع المنتجات
                     </button>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <button class="custom-btn btn btn-outline-light w-100 text-black border rounded-3 py-2 px-3 fw-semibold"
-                        style="transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
+                <div style="min-width: 150px; flex: 1 1 auto;">
+                    <button class="btn btn-outline-light text-black border rounded-3 py-2 px-3 w-100 fw-semibold"
+                        style="font-size: 1.3rem; font-weight: 900;">
                         منتج لوفي بيبي
                     </button>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <button class="custom-btn btn btn-outline-light w-100 text-black border rounded-3 py-2 px-3 fw-semibold"
-                        style="transition: 0.3s; font-size: 1.4rem; font-weight: 900;">
+                <div style="min-width: 150px; flex: 1 1 auto;">
+                    <button class="btn btn-outline-light text-black border rounded-3 py-2 px-3 w-100 fw-semibold"
+                        style="font-size: 1.3rem; font-weight: 900;">
                         منتج كالمي بيبي
                     </button>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <select class="custom-select form-select text-black border fw-semibold rounded-3 py-2 px-3 w-100"
-                        style="border: 1.5px solid #fff; background-color: transparent; transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
+                <div style="min-width: 150px; flex: 1 1 auto;">
+                    <select class="form-select text-black border fw-semibold rounded-3 py-2 px-3 w-100"
+                        style="font-size: 1.3rem; font-weight: 900; direction: rtl; text-align: center; border: 1.5px solid #fff;">
                         <option selected disabled>المقاسات</option>
                         <option value="small">صغير</option>
                         <option value="medium">متوسط</option>
@@ -183,6 +183,7 @@
                 </div>
 
             </div>
+
 
 
 
