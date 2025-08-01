@@ -91,7 +91,9 @@
     
     <div class="container mt-5">
         <div class="row align-items-center">
-            <div class="col-lg-6 intro-text text-lg-start text-center">
+            <div class="col-lg-6 intro-text text-lg-start text-center" data-aos="fade-left" 
+                 data-aos-duration="800"
+                 data-aos-delay="200">
     <h4 class="fw-bold text-dark">شركة المصنع الأول للصناعات الصحية المحدودة</h4>
     <p class="mt-3 mb-4 text-secondary">
         نلتزم في الصناعات الصحية بتقديم منتجات آمنة وموثوقة تلبي أعلى معايير الجودة العالمية،

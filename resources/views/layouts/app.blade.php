@@ -19,7 +19,7 @@
     
 </head>
 <body>
-    
+    @yield('navbar')
 
     <main class="py-0">
         @yield('content')
@@ -31,6 +31,9 @@
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     
     <!-- Custom JS -->
     <!-- {{-- <script src="{{ asset('js/main.js') }}"></script> --}} -->
