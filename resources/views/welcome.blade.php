@@ -2,9 +2,12 @@
 
 @section('title', 'الرئيسية')
 
-@extends('partials.navbar_index')
+@section('navbar')
+    @extends('partials.navbar_hero')
+@endsection
 
 @section('content')
+    
     <section class="py-1">
         <div class="container py-5">
             <div class="text-center mb-5">
