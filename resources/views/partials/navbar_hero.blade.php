@@ -26,8 +26,14 @@
                 <li class="nav-item px-1">
                     <a class="nav-link text-white fw-semibold fs-5" href="#">عن الشركة</a>
                 </li>
-                <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="#">منتجاتنا</a>
+                <li class="nav-item px-1 custom-dropdown">
+                    <a class="nav-link text-white fw-semibold fs-5" href="#" id="productsLink">
+                      منتجاتنا
+                    </a>
+                    <ul class="custom-dropdown-menu">
+                        <li><a class="custom-dropdown-item" href="#">لوفي بيبي</a></li>
+                        <li><a class="custom-dropdown-item" href="#">كالمي بيبي</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item px-1">
                     <a class="nav-link text-white fw-semibold fs-5" href="#">فروعنا</a>
@@ -62,11 +68,17 @@
                     <small>عننا</small>
                 </a>
             </li>
-            <li class="nav-item" style="flex: 1; min-width: 0;">
-                <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);">
-                    <i class="fas fa-box-open d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
-                    <small>منتجاتنا</small>
-                </a>
+           <li class="nav-item" style="flex: 1; min-width: 0;">
+                <div class="mobile-dropdown">
+                    <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);">
+                        <i class="fas fa-box-open d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
+                        <small>منتجاتنا</small>
+                    </a>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a class="mobile-dropdown-item" href="#">لوفي بيبي</a></li>
+                        <li><a class="mobile-dropdown-item" href="#">كالمي بيبي</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="nav-item" style="flex: 1; min-width: 0;">
                 <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);">

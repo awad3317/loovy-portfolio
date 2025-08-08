@@ -62,3 +62,103 @@ body {
     color: #f8f9fa !important;
     font-weight: bold;
 }
+
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(43, 59, 107, 0.9);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.custom-dropdown:hover .custom-dropdown-menu,
+.custom-dropdown:focus-within .custom-dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.custom-dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white !important;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.custom-dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* تأثيرات الـ hover الأصلية تبقى كما هي */
+.navbar-nav.d-flex.flex-row.gap-5 .nav-link:hover {
+    color: #f8f9fa !important;
+    transform: translateY(-3px);
+}
+
+/* ستايلات القائمة المنسدلة للجوال */
+.mobile-dropdown {
+    position: relative;
+}
+
+.mobile-dropdown-menu {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(43, 59, 107, 0.95);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 10px 0;
+    min-width: 150px;
+    width: max-content;
+    max-width: 90vw;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 1050;
+}
+
+.mobile-dropdown-item {
+    display: block;
+    padding: 8px 15px;
+    color: white !important;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mobile-dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* تأثيرات اللمس للجوال */
+.mobile-dropdown.active .mobile-dropdown-menu {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}

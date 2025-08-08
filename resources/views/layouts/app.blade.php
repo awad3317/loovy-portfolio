@@ -38,8 +38,7 @@
     once: true 
   });
 </script>
-    
     <!-- Custom JS -->
-    <!-- {{-- <script src="{{ asset('js/main.js') }}"></script> --}} -->
+    <script src="{{ asset('js/navbar-dropdown-menu.js') }}"></script> 
 </body>
 </html>
