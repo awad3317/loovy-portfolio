@@ -147,44 +147,7 @@
                     نقدم مجموعة متنوعة من المنتجات الصحية عالية الجودة للأطفال من مختلف الفئات العمرية
                 </h6>
             </div>
-
-            <div class="d-flex flex-wrap justify-content-center gap-2 my-4 text-center text-sm-start" data-aos="fade-up">
-
-                <div style="min-width: 150px; flex: 1 1 auto;">
-                    <button class="btn btn-outline-light text-black border rounded-3 py-2 px-3 w-100 fw-semibold"
-                        style="font-size: 1.3rem; font-weight: 900;">
-                        جميع المنتجات
-                    </button>
-                </div>
-
-                <div style="min-width: 150px; flex: 1 1 auto;">
-                    <button class="btn btn-outline-light text-black border rounded-3 py-2 px-3 w-100 fw-semibold"
-                        style="font-size: 1.3rem; font-weight: 900;">
-                        منتج لوفي بيبي
-                    </button>
-                </div>
-
-                <div style="min-width: 150px; flex: 1 1 auto;">
-                    <button class="btn btn-outline-light text-black border rounded-3 py-2 px-3 w-100 fw-semibold"
-                        style="font-size: 1.3rem; font-weight: 900;">
-                        منتج كالمي بيبي
-                    </button>
-                </div>
-
-                <div style="min-width: 150px; flex: 1 1 auto;">
-                    <select class="form-select text-black border fw-semibold rounded-3 py-2 px-3 w-100"
-                        style="font-size: 1.3rem; font-weight: 900; direction: rtl; text-align: center; border: 1.5px solid #fff;">
-                        <option selected disabled>المقاسات</option>
-                        <option value="small">صغير</option>
-                        <option value="medium">متوسط</option>
-                        <option value="large">كبير</option>
-                        <option value="x_large">كبير جداً</option>
-                    </select>
-                </div>
-
-            </div>
-
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify-content-center mt-4">
                     <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                            <img src="{{ asset('images/lofy4.jpg') }}"
@@ -203,23 +166,6 @@
                     </div>
 
                      <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-                            <img src="{{ asset('images/lofy4.jpg') }}"
-                                class="card-img-top mx-auto rounded-top img-fluid" 
-                                alt="منتج"
-                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
-
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold mb-2">حفاضات حديثي الولادة</h5>
-                                <p class="card-text text-muted small">
-                                    حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة، توفر امتصاصاً ممتازاً مع حماية
-                                    للبشرة الحساسة.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                             <img src="{{ asset('images/lofy4.jpg') }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" 
@@ -496,9 +442,7 @@
                     <div class="card shadow-sm h-100 border-0" style="background-color: #253E690D; border-radius: 12px;">
                         <div class="card-body p-4">
                             <h4 class="card-title mb-4 fw-semibold">أرسل لنا رسالة</h4>
-
                             <livewire:contactform />
-
                         </div>
                     </div>
                 </div>
