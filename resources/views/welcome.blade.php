@@ -465,7 +465,6 @@
                     <div class="card shadow-sm h-100 border-0" style="background-color: #253E690D; border-radius: 12px;">
                         <div class="card-body p-4">
                             <h4 class="card-title mb-4 fw-semibold">معلومات التواصل</h4>
-
                             <div class="mb-4 d-flex align-items-center gap-3">
                                 <i class="fa-solid fa-location-dot text-dark fs-4"></i>
                                 <div>
@@ -498,35 +497,7 @@
                         <div class="card-body p-4">
                             <h4 class="card-title mb-4 fw-semibold">أرسل لنا رسالة</h4>
 
-                            <form>
-                                <div class="row mb-3">
-                                    <div class="col">
-                                        <label class="form-label fw-semibold">الاسم</label>
-                                        <input type="text" class="form-control rounded-3" placeholder="الاسم الكامل" style="box-shadow: 0 0 6px rgba(0,0,0,0.05); border: none;">
-                                    </div>
-                                    <div class="col">
-                                        <label class="form-label fw-semibold">البريد الإلكتروني</label>
-                                        <input type="email" class="form-control rounded-3" placeholder="example@email.com" style="box-shadow: 0 0 6px rgba(0,0,0,0.05); border: none;">
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label fw-semibold">الموضوع</label>
-                                    <input type="text" class="form-control rounded-3" placeholder="موضوع الرسالة" style="box-shadow: 0 0 6px rgba(0,0,0,0.05); border: none;">
-                                </div>
-
-                                <div class="mb-4">
-                                    <label class="form-label fw-semibold">الرسالة</label>
-                                    <textarea class="form-control rounded-3" rows="4" placeholder="أكتب رسالتك هنا" style="box-shadow: 0 0 6px rgba(0,0,0,0.05); border: none;"></textarea>
-                                </div>
-
-                                <div class="text-start">
-                                    <button type="submit" class="btn text-white rounded-4 px-5 py-2 fw-semibold"
-                                            style="background-color: #2b3b6b; transition: background-color 0.3s;font-size: 1.4rem; font-weight: 900;">
-                                        أرسل الرسالة
-                                    </button>
-                                </div>
-                            </form>
+                            <livewire:contactform />
 
                         </div>
                     </div>
