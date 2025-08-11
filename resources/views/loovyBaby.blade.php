@@ -8,7 +8,7 @@
 
 @section('content')
 
-<section>
+<section style="background-image: url('{{ asset('images/photo2.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
  <div class="container pb-5">
     <div class="text-center mb-4">
         <h3 class="fw-bold mb-2" style="display: inline-block; padding-bottom: 5px;">
@@ -67,7 +67,7 @@
             </div>
 </section>
 
- <section class="py-5">
+ <section class="py-5" >
             <div class="container">
                 <div class="text-center">
                     <h3 class="fw-bold mb-2" style="display: inline-block; padding-bottom: 5px;">
