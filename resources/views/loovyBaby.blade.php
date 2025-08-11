@@ -96,7 +96,7 @@
             <div class="container">
                 <div class="text-center">
                     <h3 class="fw-bold mb-2" style="display: inline-block; padding-bottom: 5px;">
-                        مجموعة حفاضات كالمي بيبي
+                        مجموعة حفاضات لوفي بيبي
                     </h3>
                     <h6 class="text-muted">
                         اختر المقاس المناسب لطفلك من مجموعتنا المتنوعة من الحفاضات عالية الجودة </h6>
