@@ -1,0 +1,45 @@
+ .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            direction: rtl;
+            font-family: Arial, sans-serif;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .check-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 2px solid #253E69;
+            color: #253E69;
+            font-weight: bold;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 18px;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        button.custom-btn:hover {
+            background-color: #253E69 !important;
+            color: white !important;
+            border-color: #253E69 !important;
+        }
+
+        select.custom-select:hover,
+        select.custom-select:focus {
+            background-color: #253E69 !important;
+            color: white !important;
+            border-color: #253E69 !important;
+            outline: none;
+            box-shadow: none;
+        }

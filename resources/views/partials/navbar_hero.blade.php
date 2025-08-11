@@ -21,18 +21,18 @@
                 border: 1px solid rgba(255,255,255,0.1);">
                
                 <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="#">الرئيسية</a>
+                    <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/') ? 'active-nav-item' : '' }}" href="/">الرئيسية</a>
                 </li>
                 <li class="nav-item px-1">
                     <a class="nav-link text-white fw-semibold fs-5" href="#">عن الشركة</a>
                 </li>
                 <li class="nav-item px-1 custom-dropdown">
-                    <a class="nav-link text-white fw-semibold fs-5" href="#" id="productsLink">
+                    <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/loovyBaby') ? 'active-nav-item' : '' }}" href="#" id="productsLink">
                       منتجاتنا
                     </a>
                     <ul class="custom-dropdown-menu">
-                        <li><a class="custom-dropdown-item" href="#">لوفي بيبي</a></li>
-                        <li><a class="custom-dropdown-item" href="#">كالمي بيبي</a></li>
+                        <li><a class="custom-dropdown-item" href="/loovyBaby">لوفي بيبي</a></li>
+                        <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
                     </ul>
                 </li>
                 <li class="nav-item px-1">
@@ -75,8 +75,8 @@
                         <small>منتجاتنا</small>
                     </a>
                     <ul class="mobile-dropdown-menu">
-                        <li><a class="mobile-dropdown-item" href="#">لوفي بيبي</a></li>
-                        <li><a class="mobile-dropdown-item" href="#">كالمي بيبي</a></li>
+                        <li><a class="mobile-dropdown-item" href="/loovyBaby">لوفي بيبي</a></li>
+                        <li><a class="mobile-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
                     </ul>
                 </div>
             </li>
