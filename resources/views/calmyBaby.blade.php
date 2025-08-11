@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
- <section>
+ <section  style="background-image: url('{{ asset('images/photo2.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                 <div>
                 <div class="container pb-5">
                     <div class="text-center mb-4">
@@ -68,10 +68,10 @@
             </div>
             </section>
 
-             <section class="py-5 my-2">
-            <div class="container py-5">
+             <section class="py-2">
+            <div class="container py-1">
                 <div class="row align-items-center g-4">
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6 mb-4" data-aos="fade-left">
                         <h3 class="fw-bold mb-4 text-dark" style="font-family: 'Tajawal', sans-serif;">
                             لماذا تختار حفاضات لوفي بيبي؟
                         </h3>
@@ -83,9 +83,9 @@
                             <li><span class="check-icon">✔</span> اذان مطاطية جانبية</li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade-right">
                         <div class="about-image  rounded overflow-hidden">
-                            <img src="{{ asset('images/photo3.png') }}" alt="صورة منتجات كالمي بيبي"
+                            <img src="{{ asset('images/CalmyBaby.png') }}" alt="صورة منتجات كالمي بيبي"
                                 class="img-fluid w-100" style="max-height: 500px; opacity: 0.8;">
                         </div>
                     </div>
@@ -107,7 +107,7 @@
 
                 <div class="row justify-content-center my-4 text-center">
 
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3" data-aos="zoom-in" data-aos-delay="150">
                         <button
                             class="custom-btn btn btn-outline-light w-100 text-black border rounded-3 py-3 px-3 fw-semibold"
                             style="transition: 0.3s; font-size: 1rem; font-weight: 900;  font-weight: 500;">
@@ -115,7 +115,7 @@
                         </button>
                     </div>
 
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3" data-aos="zoom-in" data-aos-delay="200">
                         <button
                             class="custom-btn btn btn-outline-light w-100 text-black border rounded-3 py-3 px-3 fw-semibold"
                             style="transition: 0.3s; font-size: 1rem; font-weight: 900;">
@@ -123,28 +123,28 @@
                         </button>
                     </div>
 
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3" data-aos="zoom-in" data-aos-delay="250">
                         <button
                             class="custom-btn btn btn-outline-light w-auto text-black border rounded-3 py-3 px-3 fw-semibold"
                             style="transition: 0.3s; font-size: 1rem; font-weight: 900;">
                             مقاس 3 ( وسط )
                         </button>
                     </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3" data-aos="zoom-in" data-aos-delay="300">
                         <button
                             class="custom-btn btn btn-outline-light w-auto text-black border rounded-3 py-3 px-3 fw-semibold"
                             style="transition: 0.3s; font-size: 1rem; font-weight: 900;">
                             مقاس 4 ( كبير )
                         </button>
                     </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3" data-aos="zoom-in" data-aos-delay="350">
                         <button
                             class="custom-btn btn btn-outline-light w-auto text-black border rounded-3 py-3 px-3 fw-semibold"
                             style="transition: 0.3s; font-size: 1rem; font-weight: 900;">
                             مقاس 5 ( كبير جداً )
                         </button>
                     </div>
-                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3" data-aos="zoom-in" data-aos-delay="400">
                         <button
                             class="custom-btn btn btn-outline-light w-auto text-black border rounded-3 py-3 px-3 fw-semibold"
                             style="transition: 0.3s; font-size: 1rem; font-weight: 500;">
@@ -156,7 +156,7 @@
 
 
                 <div class="row g-4 justify-content-center">
-                     <div class="col-sm-6 col-md-4 col-lg-3">
+                     <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                             <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                                <img src="{{ asset('images/lofy4.jpg') }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" 
@@ -173,7 +173,7 @@
                             </div>
                         </div>
 
-                         <div class="col-sm-6 col-md-4 col-lg-3">
+                         <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                             <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
                                 <img src="{{ asset('images/lofy4.jpg') }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" 

@@ -56,8 +56,8 @@
                 box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                 border: 1px solid rgba(255,255,255,0.1); 
             ">
-            <li class="nav-item" style="flex: 1; min-width: 0;"> <!-- إضافة flexbox -->
-                <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);"> <!-- حجم خط متجاوب -->
+            <li class="nav-item" style="flex: 1; min-width: 0;">
+                <a class="nav-link text-white text-center px-1" href="/" style="font-size: clamp(10px, 2.5vw, 16px);"> <!-- حجم خط متجاوب -->
                     <i class="fas fa-home d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i> <!-- حجم أيقونة متجاوب -->
                     <small>الرئيسية</small>
                 </a>
