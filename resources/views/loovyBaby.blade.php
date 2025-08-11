@@ -67,6 +67,31 @@
             </div>
 </section>
 
+ <section class="py-5 my-2">
+            <div class="container py-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-6 mb-4">
+                        <h3 class="fw-bold mb-4 text-dark" style="font-family: 'Tajawal', sans-serif;">
+                            لماذا تختار حفاضات لوفي بيبي؟
+                        </h3>
+                        <ul class="features-list">
+                            <li><span class="check-icon">✔</span> تصميم T مرن</li>
+                            <li><span class="check-icon">✔</span> إمتصاص فائق</li>
+                            <li><span class="check-icon">✔</span> سطح داخلي قطني ناعم</li>
+                            <li><span class="check-icon">✔</span> حاجز تسريب مزدوج (Double lock)</li>
+                            <li><span class="check-icon">✔</span> اذان مطاطية جانبية</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-image  rounded overflow-hidden">
+                            <img src="{{ asset('images/photo3.png') }}" alt="صورة منتجات لوفي بيبي"
+                                class="img-fluid w-100" style="max-height: 500px; opacity: 0.8;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
  <section class="py-5" >
             <div class="container">
                 <div class="text-center">
