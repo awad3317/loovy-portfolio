@@ -303,10 +303,10 @@
                 </h6>
             </div>
             <div class="row align-items-start gy-4">
-                <div class="col-lg-6">
-                    <div class="d-flex flex-column gap-3">
+                <div class="col-lg-6"> 
+                    <div class="d-flex flex-column gap-3" style="max-height: 550px; overflow-y: auto; direction: ltr;">
 
-                        <div class="card shadow-sm rounded-4 border-0">
+                        <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
                             <div class="card-body">
                                 <h5 class="card-title fw-semibold mb-3">فرع حضرموت - سيئون</h5>
                                 <div class="d-flex align-items-center mb-2 text-muted">
@@ -319,7 +319,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card shadow-sm rounded-4 border-0">
+                        <div class="card shadow-sm rounded-4 border-0"  style="direction: rtl;">
                             <div class="card-body">
                                 <h5 class="card-title fw-semibold mb-3">فرع حضرموت - سيئون</h5>
                                 <div class="d-flex align-items-center mb-2 text-muted">
@@ -333,7 +333,7 @@
                             </div>
                         </div>
 
-                        <div class="card shadow-sm rounded-4 border-0">
+                        <div class="card shadow-sm rounded-4 border-0"  style="direction: rtl;">
                             <div class="card-body">
                                 <h5 class="card-title fw-semibold mb-3">فرع عدن - المنصورة</h5>
                                 <div class="d-flex align-items-center mb-2 text-muted">
@@ -347,7 +347,7 @@
                             </div>
                         </div>
 
-                        <div class="card shadow-sm rounded-4 border-0">
+                        <div class="card shadow-sm rounded-4 border-0"  style="direction: rtl;">
                             <div class="card-body">
                                 <h5 class="card-title fw-semibold mb-3">فرع صنعاء - شارع الجزائر</h5>
                                 <div class="d-flex align-items-center mb-2 text-muted">
@@ -361,7 +361,7 @@
                             </div>
                         </div>
 
-                         <div class="card shadow-sm rounded-4 border-0">
+                         <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
                             <div class="card-body">
                                 <h5 class="card-title fw-semibold mb-3">فرع صنعاء - شارع الجزائر</h5>
                                 <div class="d-flex align-items-center mb-2 text-muted">
@@ -378,7 +378,7 @@
                 </div>
 
                 <div class="col-lg-6 text-center">
-                    <div class="rounded-4 shadow-sm overflow-hidden" style="height: 700px;">
+                    <div class="rounded-4 shadow-sm overflow-hidden" style="height: 550px;">
                        <iframe
                              src="https://www.google.com/maps/d/embed?mid=1Lv0VGdKiJRY2ucl41RbrYrGBYyfZvDw&ehbc=2E312F&ll=18.0,45.0&z=6"
                             width="100%"
