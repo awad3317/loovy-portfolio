@@ -44,7 +44,7 @@
             </ul>
         </div>
         <a class="me-1 justify-content-start" href="#" style="z-index: 1050;">
-                <img src="{{asset('images/search.png')}}" alt="شعار الشركة" width="40">
+                {{-- <img src="{{asset('images/search.png')}}" alt="شعار الشركة" width="40"> --}}
         </a>
         
         <div class="d-lg-none fixed-bottom py-2 px-2">

@@ -26,12 +26,10 @@
         }
     </style>
     
-    <!-- Preload للموارد -->
     <link rel="preload" href="{{ asset('bootstrap/css/bootstrap.rtl.min.css') }}" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="preload" href="{{ asset('css/style.css') }}" as="style">
     
-    <!-- CSS الأساسية -->
     <link href="{{ asset('bootstrap/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -51,6 +49,9 @@
     <main class="py-0">
         @yield('content')
     </main>
+    <a href="https://wa.me/رقم_الهاتف" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+  </a>
     
     @include('partials.footer')
     
@@ -59,7 +60,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
     <script src="{{ asset('js/navbar-dropdown-menu.js') }}" defer></script>
     
-    <!-- إخفاء Loader وإظهار المحتوى -->
     <script>
         window.addEventListener('load', function() {
             document.querySelector('.initial-loader').style.display = 'none';
