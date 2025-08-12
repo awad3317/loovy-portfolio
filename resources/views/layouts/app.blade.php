@@ -49,9 +49,6 @@
     <main class="py-0">
         @yield('content')
     </main>
-    <a href="https://wa.me/رقم_الهاتف" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp whatsapp-icon"></i>
-  </a>
     
     @include('partials.footer')
     
