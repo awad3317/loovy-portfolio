@@ -244,48 +244,63 @@
                 </div>
                 <div class="col-lg-6"  data-aos="fade-left">
                     <div class="d-flex flex-column gap-3">
-                            <div class="card border-0 shadow-sm rounded-4 px-3 py-3"  data-aos="fade-up" data-aos-delay="100">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="bg-light   rounded-circle d-flex justify-content-center align-items-center"
-                                         style="width: 60px; height: 60px; font-size: 28px;">
-                                        <i class="fa-solid fa-award"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
+                        <div class="card border-0 shadow-sm rounded-4 px-3 py-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-light rounded-circle d-flex justify-content-center align-items-center"
+                                    style="width: 60px; height: 60px; font-size: 28px;">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
-                                        <p class="text-muted mb-0 small">
-                                            حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
-                                        </p>
+                                        <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf" style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                            <i class="fas fa-download me-1"></i>
+                                        </a>
                                     </div>
+                                    <p class="text-muted mb-0 small">
+                                        حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="card border-0 shadow-sm rounded-4 px-3 py-3"  data-aos="fade-up" data-aos-delay="200">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="bg-light   rounded-circle d-flex justify-content-center align-items-center"
-                                         style="width: 60px; height: 60px; font-size: 28px;">
-                                        <i class="fa-solid fa-award"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
+                        </div>
+                        <div class="card border-0 shadow-sm rounded-4 px-3 py-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-light rounded-circle d-flex justify-content-center align-items-center"
+                                    style="width: 60px; height: 60px; font-size: 28px;">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
-                                        <p class="text-muted mb-0 small">
-                                            حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
-                                        </p>
+                                        <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf" style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                            <i class="fas fa-download me-1"></i>
+                                        </a>
                                     </div>
+                                    <p class="text-muted mb-0 small">
+                                        حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
+                                    </p>
                                 </div>
                             </div>
-                             <div class="card border-0 shadow-sm rounded-4 px-3 py-3"  data-aos="fade-up" data-aos-delay="300">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="bg-light   rounded-circle d-flex justify-content-center align-items-center"
-                                         style="width: 60px; height: 60px; font-size: 28px;">
-                                        <i class="fa-solid fa-award"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
+                        </div>
+                        <div class="card border-0 shadow-sm rounded-4 px-3 py-3" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-light rounded-circle d-flex justify-content-center align-items-center"
+                                    style="width: 60px; height: 60px; font-size: 28px;">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
-                                        <p class="text-muted mb-0 small">
-                                            حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
-                                        </p>
+                                        <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf" style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                            <i class="fas fa-download me-1"></i>
+                                        </a>
                                     </div>
+                                    <p class="text-muted mb-0 small">
+                                        حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل الممارسات في جميع عملياتنا.
+                                    </p>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
