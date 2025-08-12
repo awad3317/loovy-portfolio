@@ -22,13 +22,13 @@ class Contactform extends Component
     ];
 
     protected $messages = [
-        'name.required' => 'حقل الاسم مطلوب.',
+        'name.required' => 'يجب عليك كاتبة الاسم .',
         'name.min' => 'يجب أن يكون الاسم على الأقل 3 أحرف.',
-        'email.required' => 'حقل البريد الإلكتروني مطلوب.',
+        'email.required' => 'يجب عليك كتابة بريدك الالكتروني.',
         'email.email' => 'يجب إدخال بريد إلكتروني صالح.',
-        'subject.required' => 'حقل الموضوع مطلوب.',
+        'subject.required' => 'يجب عليك كتابة اسم الموضوع .',
         'subject.min' => 'يجب أن يكون الموضوع على الأقل 5 أحرف.',
-        'message.required' => 'حقل الرسالة مطلوب.',
+        'message.required' => 'يجب عليك كتابة الرسالة.',
         'message.min' => 'يجب أن تكون الرسالة على الأقل 10 أحرف.',
     ];
 
