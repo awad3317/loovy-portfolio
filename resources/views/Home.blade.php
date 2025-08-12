@@ -254,7 +254,7 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
                                         <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf" style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                                            <i class="fas fa-download me-1"></i>
+                                            <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
                                     </div>
                                     <p class="text-muted mb-0 small">
@@ -273,7 +273,7 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
                                         <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf" style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                                            <i class="fas fa-download me-1"></i>
+                                            <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
                                     </div>
                                     <p class="text-muted mb-0 small">
@@ -292,7 +292,7 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
                                         <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf" style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                                            <i class="fas fa-download me-1"></i>
+                                            <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
                                     </div>
                                     <p class="text-muted mb-0 small">
