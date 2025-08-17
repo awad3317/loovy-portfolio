@@ -457,7 +457,7 @@
                     <div class="card shadow-sm h-100 border-0" style="background-color: #253E690D; border-radius: 12px;">
                         <div class="card-body p-4">
                             <h4 class="card-title mb-4 fw-semibold">أرسل لنا رسالة</h4>
-                            <livewire:contactform />
+                            <livewire:contactform lazy/>
                         </div>
                     </div>
                 </div>
