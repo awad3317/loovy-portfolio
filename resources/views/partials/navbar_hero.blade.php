@@ -31,7 +31,7 @@
                       منتجاتنا
                     </a>
                     <ul class="custom-dropdown-menu">
-                        <li><a class="custom-dropdown-item" href="/loovyBaby">لوفي بيبي</a></li>
+                        <li><a class="custom-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
                         <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
                     </ul>
                 </li>
@@ -75,7 +75,7 @@
                         <small>منتجاتنا</small>
                     </a>
                     <ul class="mobile-dropdown-menu">
-                        <li><a class="mobile-dropdown-item" href="/loovyBaby">لوفي بيبي</a></li>
+                        <li><a class="mobile-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
                         <li><a class="mobile-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
                     </ul>
                 </div>
