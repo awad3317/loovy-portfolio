@@ -33,6 +33,8 @@
                     <ul class="custom-dropdown-menu">
                         <li><a class="custom-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
                         <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
+                        <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
+
                     </ul>
                 </li>
                 <li class="nav-item px-1">
@@ -77,6 +79,7 @@
                     <ul class="mobile-dropdown-menu">
                         <li><a class="mobile-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
                         <li><a class="mobile-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
+                        <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
                     </ul>
                 </div>
             </li>
@@ -112,10 +115,13 @@
         لنضمن راحة وصحة أطفالكم في كل لحظة.
     </p> 
     <div class="d-lg-block d-flex justify-content-center">
-        <button class="btn text-white rounded-4 px-5 fw-bold"
+        <a href="/all_product">
+            <button class="btn text-white rounded-4 px-5 fw-bold"
                 style="background-color: #2b3b6b; font-size: 1.5rem; font-weight: 900;">
-            أكتشف منتجاتنا
-        </button>
+                أكتشف منتجاتنا
+            </button>
+        </a>
+        
     </div>
 </div>
             <div class="col-lg-6 text-center intro-image">

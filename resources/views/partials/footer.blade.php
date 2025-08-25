@@ -1,13 +1,13 @@
-<footer class="bg-dark-blue text-white pt-5 pb-3" style="background-color: #243b6f;">
+<footer class="bg-dark text-white pt-5 pb-3" style="background-color: #243b6f !important;">
     <div class="container">
-        <div class="row">
+        <div class="row gy-4">
             <!-- العمود 1: معلومات الشركة -->
-            <div class="col-12 col-md-3 mb-4 text-md-start text-center">
-                <h5 class="fw-bold">شركة المصنع الأول للصناعات الصحية المحدودة</h5>
+            <div class="col-12 col-md-4 text-center text-md-start">
+                <h5 class="fw-bold mb-3">شركة المصنع الأول للصناعات الصحية المحدودة</h5>
                 <p class="mt-3 small">
                     نقدم مجموعة متنوعة من المنتجات الصحية عالية الجودة للأطفال من مختلف الفئات العمرية.
                 </p>
-                <div class="d-flex gap-3 mt-3 fs-5 justify-content-md-start justify-content-center">
+                <div class="d-flex gap-3 mt-3 fs-5 justify-content-center justify-content-md-start">
                     <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
                     <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
@@ -15,42 +15,38 @@
             </div>
 
             <!-- العمود 2: روابط سريعة -->
-            <div class="col-6 col-md-3 mb-4 text-center">
-                <h6 class="fw-bold">روابط سريعة</h6>
-                <ul class="list-unstyled mt-3 small">
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">الرئيسية</a></li>
+            <div class="col-6 col-md-4 text-center">
+                <h6 class="fw-bold mb-3">روابط سريعة</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="/" class="text-white text-decoration-none">الرئيسية</a></li>
                     <li class="mb-2"><a href="#" class="text-white text-decoration-none">عن الشركة</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">خدماتنا</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">العروض الخاصة</a></li>
+                    <li class="mb-2"><a href="/all_product" class="text-white text-decoration-none">منتجاتنا</a></li>
+                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">فروعنا</a></li>
                     <li class="mb-2"><a href="#" class="text-white text-decoration-none">تواصل معنا</a></li>
                 </ul>
             </div>
 
-            <!-- العمود 3: الدعم -->
-            <div class="col-6 col-md-3 mb-4 text-center">
-                <h6 class="fw-bold">الدعم</h6>
-                <ul class="list-unstyled mt-3 small">
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">الأسئلة الشائعة</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">سياسة الخصوصية</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">شروط الاستخدام</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">سياسة الإلغاء</a></li>
-                </ul>
-            </div>
-
-            <div class="col-12 col-md-3 mb-4 text-center">
-                <h6 class="fw-bold">اتصل بنا</h6>
-                <ul class="list-unstyled mt-3 small">
-                    <li class="mb-2"><i class="bi bi-geo-alt-fill mb-2"></i> اليمن، حضرموت، سيئون</li>
-                    <li class="mb-2"><i class="bi bi-telephone-fill mb-2"></i> +967 770000000</li>
-                    <li class="mb-1"><i class="bi bi-envelope-fill mb-2"></i> info@gmail.com</li>
+            <!-- العمود 3: اتصل بنا -->
+            <div class="col-6 col-md-4 text-center">
+                <h6 class="fw-bold mb-3">اتصل بنا</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2 d-flex align-items-center justify-content-center justify-content-md-center">
+                        <i class="bi bi-geo-alt-fill me-2"></i> اليمن، حضرموت، سيئون
+                    </li>
+                    <li class="mb-2 d-flex align-items-center justify-content-center justify-content-md-center">
+                        <i class="bi bi-telephone-fill me-2"></i> +967 770000000
+                    </li>
+                    <li class="mb-1 d-flex align-items-center justify-content-center justify-content-md-center">
+                        <i class="bi bi-envelope-fill me-2"></i> info@gmail.com
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <hr class="text-white my-3">
+        <hr class="my-4">
 
         <div class="text-center small">
-            © 2025 ريالي. جميع الحقوق محفوظة.
+            © 2025 شركة المصنع الأول للصناعات الصحية المحدودة. جميع الحقوق محفوظة.
         </div>
     </div>
 </footer>

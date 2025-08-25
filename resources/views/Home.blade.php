@@ -219,10 +219,13 @@
             </div>
 
             <div class="d-flex justify-content-center mt-5">
-                <button class="btn text-white rounded-3 px-5 py-3 fw-semibold"
-                    style="background-color: #2b3b6b; transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
-                    عرض جميع المنتجات
-                </button>
+                <a href="/all_product">
+                    <button class="btn text-white rounded-3 px-5 py-3 fw-semibold"
+                        style="background-color: #2b3b6b; transition: 0.3s; font-size: 1.5rem; font-weight: 900;">
+                        عرض جميع المنتجات
+                    </button>
+                </a>
+                
             </div>
         </div>
     </section>

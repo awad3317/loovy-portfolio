@@ -25,6 +25,7 @@
                     <ul class="custom-dropdown-menu">
                         <li><a class="custom-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
                         <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
+                        <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
                     </ul>
                 </li>
                 <li class="nav-item px-1">
@@ -69,6 +70,7 @@
                     <ul class="mobile-dropdown-menu">
                         <li><a class="mobile-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
                         <li><a class="mobile-dropdown-item" href="calmyBaby">كالمي بيبي</a></li>
+                        <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
                     </ul>
                 </div>
             </li>

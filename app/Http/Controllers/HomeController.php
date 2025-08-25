@@ -17,4 +17,8 @@ class HomeController extends Controller
         $data = config('products.lofy_baby');
         return view('lofyBaby', compact('data'));
     }
+    public function ALL_product()
+    {
+        return view('all_product',);
+    }
 }
