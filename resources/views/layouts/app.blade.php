@@ -51,7 +51,39 @@
     <main class="py-0">
         @yield('content')
     </main>
-    
+    <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/967779522898?text=مرحباً%20أود%20الاستفسار%20عن%20منتجاتكم" 
+   class="whatsapp-float" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+.whatsapp-float {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+}
+</style>
     @include('partials.footer')
     @livewireScripts
     <!-- JS مع defer -->
