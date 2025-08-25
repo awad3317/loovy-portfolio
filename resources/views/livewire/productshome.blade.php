@@ -33,7 +33,7 @@
                         class="custom-btn btn w-100 rounded-3 py-3 fw-semibold border
                    {{ $selectedType === 'lofy_baby' ? 'btn-active' : 'btn-inactive' }}">
 
-                        مقاسات لوفي بيبي
+                         لوفي بيبي
                     </button>
                 </div>
 
@@ -41,7 +41,7 @@
                     <button wire:click="filterByType('calmy_baby')"
                         class="custom-btn btn w-100 rounded-3 py-3 fw-semibold border
            {{ $selectedType === 'calmy_baby' ? 'btn-active' : 'btn-inactive' }}">
-                        مقاسات كالمي بيبي
+                         كالمي بيبي
                     </button>
                 </div>
 
