@@ -17,5 +17,12 @@ Route::get('/', function () {
 // });
 
 
+// Route::get('/calmy-baby', function () {
+//     return view('calmy');
+// })->name('calmy');
+
+// Route::get('/lofy-baby', function () {
+//     return view('lofy');
+// })->name('lofy');
 Route::get('calmyBaby', [HomeController::class, 'calmyBaby']);
 Route::get('lofyBaby', [HomeController::class, 'lofyBaby']);

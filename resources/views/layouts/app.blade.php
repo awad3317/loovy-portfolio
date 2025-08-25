@@ -37,6 +37,8 @@
     <link href="{{ asset('css/footer-style.css') }}" rel="stylesheet">
 </head>
 <body>
+    @livewireStyles
+
     <!-- Loader مؤقت -->
     <div class="initial-loader">
         <div class="spinner-border text-primary" role="status">
@@ -51,7 +53,7 @@
     </main>
     
     @include('partials.footer')
-    
+    @livewireScripts
     <!-- JS مع defer -->
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
