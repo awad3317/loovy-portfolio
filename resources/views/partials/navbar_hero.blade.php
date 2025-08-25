@@ -24,7 +24,7 @@
                     <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/') ? 'active-nav-item' : '' }}" href="/">الرئيسية</a>
                 </li>
                 <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="#">عن الشركة</a>
+                    <a class="nav-link text-white fw-semibold fs-5" href="{{url('Home')}}">عن الشركة</a>
                 </li>
                 <li class="nav-item px-1 custom-dropdown">
                     <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/loovyBaby') ? 'active-nav-item' : '' }}" href="#" id="productsLink">
