@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-     public function calmyBaby()
+    public function calmyBaby()
     {
         $data = config('products.calmy_baby');
         return view('calmyBaby', compact('data'));
@@ -21,4 +21,34 @@ class HomeController extends Controller
     {
         return view('all_product',);
     }
+
+public function showProduct($type, $id)
+{
+    $configType = config("products.$type");
+
+    if (!$configType || !isset($configType['products']) || !is_array($configType['products'])) {
+        abort(404, "النوع $type غير موجود");
+    }
+
+    // البحث عن المنتج بالـ id
+    $product = collect($configType['products'])->firstWhere('id', $id);
+
+    if (!$product) {
+        abort(404, "المنتج غير موجود");
+    }
+
+    // جلب جميع المنتجات من نفس النوع (يمكن استثناء المنتج الحالي لو أحببت)
+    $similarProducts = collect($configType['products'])->filter(function($p) use ($id) {
+        return $p['id'] != $id; // استثناء المنتج الحالي
+    })->take(4)
+    ->values();
+
+    return view('product_specifc', [
+        'product' => $product,
+        'type' => $type,
+        'id' => $id,
+        'similarProducts' => $similarProducts,
+    ]);
+}
+
 }

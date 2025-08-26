@@ -33,7 +33,7 @@
                         class="custom-btn btn w-100 rounded-3 py-3 fw-semibold border
                    {{ $selectedType === 'lofy_baby' ? 'btn-active' : 'btn-inactive' }}">
 
-                         لوفي بيبي
+                        لوفي بيبي
                     </button>
                 </div>
 
@@ -41,7 +41,7 @@
                     <button wire:click="filterByType('calmy_baby')"
                         class="custom-btn btn w-100 rounded-3 py-3 fw-semibold border
            {{ $selectedType === 'calmy_baby' ? 'btn-active' : 'btn-inactive' }}">
-                         كالمي بيبي
+                        كالمي بيبي
                     </button>
                 </div>
 
@@ -74,20 +74,25 @@
             <div class="row g-4 justify-content-center">
                 @forelse($products as $product)
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-                            <img src="{{ asset($product['image']) }}" class="card-img-top mx-auto rounded-top img-fluid"
-                                alt="{{ $product['name'] }}"
-                                style="object-fit: contain; max-height: 200px; width: auto;">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold mb-2">{{ $product['name'] }}</h5>
-                                <p class="card-text text-muted small">{{ $product['description'] }}</p>
+                        <a href="{{ route('products.show', ['type' => $product['type'], 'id' => $product['id']]) }}"
+                            class="text-decoration-none text-dark">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+                                <img src="{{ asset($product['image']) }}"
+                                    class="card-img-top mx-auto rounded-top img-fluid" alt="{{ $product['name'] }}"
+                                    style="object-fit: contain; max-height: 200px; width: auto;">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold mb-2">{{ $product['name'] }}</h5>
+                                    <p class="card-text text-muted small">{{ $product['description'] }}</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 @empty
                     <p class="text-center text-muted">لا توجد منتجات لهذا المقاس.</p>
                 @endforelse
             </div>
+
+
 
         </div>
     </section>
