@@ -10,7 +10,6 @@ class Productshome extends Component
     public $sizes = [];
     public $products = [];
     public $allProducts = [];
-    public $brands = [];
     public $selectedBrand = null;
     public $selectedSizes = [];
     public $selectedType = null;
@@ -18,7 +17,6 @@ class Productshome extends Component
     public function mount($types = [])
     {
         $this->allProducts = [];
-        $this->brands = [];
         $this->sizes = [];
 
         foreach ($types as $type) {
@@ -26,22 +24,12 @@ class Productshome extends Component
 
             if (!$data) continue;
 
-            // دمج المنتجات
             $this->allProducts = array_merge($this->allProducts, $data['products'] ?? []);
-
-            // دمج الماركات
-            if (isset($data['brands'])) {
-                $this->brands = array_merge($this->brands, $data['brands']);
-            }
-
-            // دمج المقاسات
             $this->sizes = array_unique(array_merge($this->sizes, $data['sizes'] ?? []));
         }
 
         $this->products = $this->allProducts;
     }
-
-
     public function filterByType($type)
     {
         $this->selectedType = $type;
@@ -57,12 +45,6 @@ class Productshome extends Component
         $this->products = array_filter($this->allProducts, function ($product) use ($size) {
             return isset($product['size']) && $product['size'] === $size;
         });
-    }
-
-    public function filterByBrand($brand)
-    {
-        $this->selectedBrand = $brand;
-        $this->applyFilters();
     }
 
     public function toggleSize($size)

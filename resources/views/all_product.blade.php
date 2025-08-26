@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'الرئيسيه')
+@section('title', 'كل المنتجات')
 
 @section('navbar')
     @extends('partials.navbar')
