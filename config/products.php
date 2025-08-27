@@ -19,62 +19,98 @@ return [
             'مقاس 6 (كبير جداً جداً)'
         ],
         'products' => [
-            
-                [
-                    'id' => 1,
-                    'name' => 'حفاضات حديثي الولادة',
-                    'image' => 'images/calmy_p1.jpg',
-                    'description' => 'حفاضات فائقة النعومة...',
-                    'size' => 'مقاس 1 (حديث الولادة)',
-                    'type' => 'calmy_baby',
-                    'weight' => '2-4 كغ',
+
+            [
+                'id' => 1,
+                'name' => 'حفاضات حديثي الولادة',
+                'image' => 'images/calmy_p1.jpg',
+                'images' => [
+                    'images/calmy_p1.jpg',
+                    'images/calmy_p2.jpg',
+                    'images/calmy_p3.jpg',
+                    'images/calmy_p4.jpg'
                 ],
-                [
-                    'id' => 2,
-                    'name' => 'حفاضات حجم كبير',
-                    'image' => 'images/calmy_p2.jpg',
-                    'description' => 'حفاضات فائقة النعومة...',
-                    'size' => 'مقاس 4 (كبير)',
-                    'type' => 'calmy_baby',
-                    'weight' => '7-10 كغ',
+                'description' => 'حفاضات فائقة النعومة...',
+                'size' => 'مقاس 1 (حديث الولادة)',
+                'type' => 'calmy_baby',
+                'weight' => '2-4 كغ',
+            ],
+            [
+                'id' => 2,
+                'name' => 'حفاضات حجم كبير',
+                'image' => 'images/calmy_p2.jpg',
+                'images' => [
+                    'images/calmy_p1.jpg',
+                    'images/calmy_p2.jpg',
+                    'images/calmy_p3.jpg',
+                    'images/calmy_p4.jpg'
                 ],
-                [
-                    'id' => 3,
-                    'name' => 'حفاضات حجم صغير',
-                    'image' => 'images/calmy_p3.jpg',
-                    'description' => 'حفاضات فائقة النعومة...',
-                    'size' => 'مقاس 2 (صغير)',
-                    'type' => 'calmy_baby',
-                    'weight' => '3-6 كغ',
+                'description' => 'حفاضات فائقة النعومة...',
+                'size' => 'مقاس 4 (كبير)',
+                'type' => 'calmy_baby',
+                'weight' => '7-10 كغ',
+            ],
+            [
+                'id' => 3,
+                'name' => 'حفاضات حجم صغير',
+                'image' => 'images/calmy_p3.jpg',
+                'images' => [
+                    'images/calmy_p1.jpg',
+                    'images/calmy_p2.jpg',
+                    'images/calmy_p3.jpg',
+                    'images/calmy_p4.jpg'
                 ],
-                [
-                    'id' => 4,
-                    'name' => 'حفاضات حجم وسط',
-                    'image' => 'images/calmy_p4.jpg',
-                    'description' => 'مصممة لتناسب حركة الطفل...',
-                    'size' => 'مقاس 3 (وسط)',
-                    'type' => 'calmy_baby',
-                    'weight' => '5-8 كغ',
+                'description' => 'حفاضات فائقة النعومة...',
+                'size' => 'مقاس 2 (صغير)',
+                'type' => 'calmy_baby',
+                'weight' => '3-6 كغ',
+            ],
+            [
+                'id' => 4,
+                'name' => 'حفاضات حجم وسط',
+                'image' => 'images/calmy_p4.jpg',
+                'images' => [
+                    'images/calmy_p1.jpg',
+                    'images/calmy_p2.jpg',
+                    'images/calmy_p3.jpg',
+                    'images/calmy_p4.jpg'
                 ],
-                [
-                    'id' => 5,
-                    'name' => 'حفاضات حجم كبير جداً',
-                    'image' => 'images/calmy_p2.jpg',
-                    'description' => 'حفاضات فائقة النعومة...',
-                    'size' => 'مقاس 5 (كبير جداً)',
-                    'type' => 'calmy_baby',
-                    'weight' => '9-12 كغ',
+                'description' => 'مصممة لتناسب حركة الطفل...',
+                'size' => 'مقاس 3 (وسط)',
+                'type' => 'calmy_baby',
+                'weight' => '5-8 كغ',
+            ],
+            [
+                'id' => 5,
+                'name' => 'حفاضات حجم كبير جداً',
+                'image' => 'images/calmy_p2.jpg',
+                'images' => [
+                    'images/calmy_p1.jpg',
+                    'images/calmy_p2.jpg',
+                    'images/calmy_p3.jpg',
+                    'images/calmy_p4.jpg'
                 ],
-                [
-                    'id' => 6,
-                    'name' => 'حفاضات حجم كبير جداً جداً',
-                    'image' => 'images/calmy_p2.jpg',
-                    'description' => 'حفاضات فائقة النعومة...',
-                    'size' => 'مقاس 6 (كبير جداً جداً)',
-                    'type' => 'calmy_baby',
-                    'weight' => '12-15 كغ',
+                'description' => 'حفاضات فائقة النعومة...',
+                'size' => 'مقاس 5 (كبير جداً)',
+                'type' => 'calmy_baby',
+                'weight' => '9-12 كغ',
+            ],
+            [
+                'id' => 6,
+                'name' => 'حفاضات حجم كبير جداً جداً',
+                'image' => 'images/calmy_p2.jpg',
+                'images' => [
+                    'images/calmy_p1.jpg',
+                    'images/calmy_p2.jpg',
+                    'images/calmy_p3.jpg',
+                    'images/calmy_p4.jpg'
                 ],
-            
+                'description' => 'حفاضات فائقة النعومة...',
+                'size' => 'مقاس 6 (كبير جداً جداً)',
+                'type' => 'calmy_baby',
+                'weight' => '12-15 كغ',
+            ],
+
 
         ],
 
@@ -101,6 +137,13 @@ return [
                 'id' => 1,
                 'name' => 'حفاضات حديثي الولادة',
                 'image' => 'images/lofy_p1.jpg',
+
+                'images' => [
+                    'images/lofy_p1.jpg',
+                    'images/lofy_p2.jpg',
+                    'images/lofy_p3.jpg',
+                    'images/lofy_p4.jpg'
+                ],
                 'description' => 'حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة.',
                 'size' => 'مقاس 1 (حديث الولادة)',
                 'type' => 'lofy_baby',
@@ -111,6 +154,13 @@ return [
                 'id' => 2,
                 'name' => 'حفاضات مقاس صغير',
                 'image' => 'images/lofy_p2.jpg',
+
+                'images' => [
+                    'images/lofy_p1.jpg',
+                    'images/lofy_p2.jpg',
+                    'images/lofy_p3.jpg',
+                    'images/lofy_p4.jpg'
+                ],
                 'description' => 'حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة.',
                 'size' => 'مقاس 2 (صغير)',
                 'type' => 'lofy_baby',
@@ -120,6 +170,12 @@ return [
                 'id' => 3,
                 'name' => 'حفاضات مقاس وسط',
                 'image' => 'images/lofy_p3.jpg',
+                'images' => [
+                    'images/lofy_p1.jpg',
+                    'images/lofy_p2.jpg',
+                    'images/lofy_p3.jpg',
+                    'images/lofy_p4.jpg'
+                ],
                 'description' => 'حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة.',
                 'size' => 'مقاس 3 (وسط)',
                 'type' => 'lofy_baby',
@@ -130,6 +186,12 @@ return [
                 'id' => 4,
                 'name' => 'حفاضات مقاس كبير',
                 'image' => 'images/lofy_p4.jpg',
+                'images' => [
+                    'images/lofy_p1.jpg',
+                    'images/lofy_p2.jpg',
+                    'images/lofy_p3.jpg',
+                    'images/lofy_p4.jpg'
+                ],
                 'description' => 'حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة.',
                 'size' => 'مقاس 4 (كبير)',
                 'type' => 'lofy_baby',
@@ -140,6 +202,12 @@ return [
                 'id' => 5,
                 'name' => 'حفاضات مقاس كبيرا جدا',
                 'image' => 'images/lofy_p5.jpg',
+                'images' => [
+                    'images/lofy_p1.jpg',
+                    'images/lofy_p2.jpg',
+                    'images/lofy_p3.jpg',
+                    'images/lofy_p4.jpg'
+                ],
                 'description' => 'حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة.',
                 'size' => 'مقاس 5 (كبير جداً)',
                 'type' => 'lofy_baby',
@@ -149,6 +217,12 @@ return [
                 'id' => 6,
                 'name' => 'حفاضات مقاس كبير جدا جدا',
                 'image' => 'images/lofy_p6.jpg',
+                'images' => [
+                    'images/lofy_p1.jpg',
+                    'images/lofy_p2.jpg',
+                    'images/lofy_p3.jpg',
+                    'images/lofy_p4.jpg'
+                ],
                 'description' => 'حفاضات فائقة النعومة مصممة خصيصاً للأطفال حديثي الولادة.',
                 'size' => 'مقاس 6 (كبير جداً جداً)',
                 'type' => 'lofy_baby',

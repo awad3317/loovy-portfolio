@@ -133,32 +133,30 @@
         </div>
 
         <div class="row mb-5">
-            <div class="col-md-5 product-image">
-                <div class="img-placeholder mb-3">
-                    <img src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}"
-                    class="card-img-top mx-auto rounded-top img-fluid" 
-                                alt="منتج"
-                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
-                </div>
-                <div class="row mt-3">
-                    <div class="col-3">
-                        <div class="img-placeholder" style="height: 80px;"><img src="{{ asset($product['image']) }}"
-                                alt="حفاضات لوفي بيبي"style="height: 150%; width: 150%;" class="img-fluid"></div>
-                    </div>
-                    <div class="col-3">
-                        <div class="img-placeholder" style="height: 80px;"><img src="{{ asset($product['image']) }}"
-                                alt="حفاضات لوفي بيبي"style="height: 150%; width: 150%;" class="img-fluid"></div>
-                    </div>
-                    <div class="col-3">
-                        <div class="img-placeholder" style="height: 80px; "><img src="{{ asset($product['image']) }}"
-                                alt="حفاضات لوفي بيبي"style="height: 150%; width: 150%;" class="img-fluid"></div>
-                    </div>
-                    <div class="col-3">
-                        <div class="img-placeholder" style="height: 80px;"><img src="{{ asset($product['image']) }}"
-                                alt="حفاضات لوفي بيبي"style="height: 150%; width: 150%;" class="img-fluid"></div>
-                    </div>
+    <div class="col-md-5 product-image" x-data="{ mainImage: '{{ asset($product['image']) }}' }">
+    <!-- الصورة الرئيسية -->
+    <div class="img-placeholder mb-3">
+        <img :src="mainImage" 
+             alt="{{ $product['name'] }}"
+             class="card-img-top mx-auto rounded-top img-fluid"
+             style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
+    </div>
+
+    <!-- الصور الفرعية -->
+    <div class="row mt-3">
+        @foreach($product['images'] as $img)
+            <div class="col-3">
+                <div class="img-placeholder" style="height: 80px;">
+                    <img src="{{ asset($img) }}" 
+                         class="img-fluid" 
+                         style="height: 150%; width: 150%; cursor: pointer;"
+                         @click="mainImage = '{{ asset($img) }}'">
                 </div>
             </div>
+        @endforeach
+    </div>
+</div>
+
 
             <div class="col-md-7">
                 <div class="card p-4">
