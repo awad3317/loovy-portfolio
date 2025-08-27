@@ -135,7 +135,10 @@
         <div class="row mb-5">
             <div class="col-md-5 product-image">
                 <div class="img-placeholder mb-3">
-                    <img src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}" class="img-fluid main-img">
+                    <img src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}"
+                    class="card-img-top mx-auto rounded-top img-fluid" 
+                                alt="منتج"
+                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
                 </div>
                 <div class="row mt-3">
                     <div class="col-3">
@@ -178,7 +181,10 @@
                     <a href="{{ route('products.show', ['type' => $item['type'], 'id' => $item['id']]) }}"
                         class="text-decoration-none text-dark">
                         <div class="card product-card h-100">
-                            <img src="{{ asset($item['image']) }}" class="card-img-top" alt="{{ $item['name'] }}">
+                            <img src="{{ asset($item['image']) }}" class="card-img-top" alt="{{ $item['name'] }}"
+                            class="card-img-top mx-auto rounded-top img-fluid" 
+                                alt="منتج"
+                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $item['name'] }}</h5>
                                 <p class="card-text">{{ $item['description'] }}</p>
@@ -238,7 +244,7 @@
         <div class="cta-section p-5 text-center text-white mb-5">
             <h2 class="mb-3">جرب حفاضات لوفي بيبي الآن!</h2>
             <p class="lead mb-4">انضم إلى آلاف الأمهات الراضيات عن منتجاتنا</p>
-            <a href="https://wa.me/967779522898?text=السلام عليكم، أريد طلب منتج" target="_blank"
+            <a href="https://wa.me/967770662355?text=السلام عليكم، أريد طلب منتج" target="_blank"
                 class="btn btn-success btn-lg px-5">
                 اطلب الآن
             </a>
