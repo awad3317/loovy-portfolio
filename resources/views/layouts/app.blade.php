@@ -52,7 +52,7 @@
         @yield('content')
     </main>
     <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/967779522898?text=مرحباً%20أود%20الاستفسار%20عن%20منتجاتكم" 
+<a href="https://wa.me/967770662355?text=مرحباً%20أود%20الاستفسار%20عن%20منتجاتكم" 
    class="whatsapp-float" 
    target="_blank">
    <i class="fab fa-whatsapp"></i>
