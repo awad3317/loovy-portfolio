@@ -55,14 +55,14 @@ class Products extends Component
             $products = collect([$this->selectedBrand => $products[$this->selectedBrand]]);
         }
 
-        $filtered = $filtered->filter(function ($product) {
-            return isset($product['size']) && in_array($product['size'], $this->selectedSizes);
+        // Flatten the products to get a collection of all products
+        $filtered = collect($products)->flatMap(function ($brand) {
+            return $brand['products'];
         });
-
 
         if ($this->selectedSizes) {
             $filtered = $filtered->filter(function ($product) {
-                return in_array($product['size'], $this->selectedSizes);
+                return isset($product['size']) && in_array($product['size'], $this->selectedSizes);
             });
         }
 

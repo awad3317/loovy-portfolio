@@ -10,10 +10,9 @@ class Productshome extends Component
     public $sizes = [];
     public $products = [];
     public $allProducts = [];
-    public $selectedBrand = null;
-    public $selectedSizes = [];
     public $selectedType = null;
-    public $selectedSize = null;
+    public $selectedSizes = [];
+
     public function mount($types = [])
     {
         $this->allProducts = [];
@@ -28,23 +27,14 @@ class Productshome extends Component
             $this->sizes = array_unique(array_merge($this->sizes, $data['sizes'] ?? []));
         }
 
+        shuffle($this->allProducts);
         $this->products = $this->allProducts;
     }
+
     public function filterByType($type)
     {
         $this->selectedType = $type;
-
-        $this->products = array_filter($this->allProducts, function ($p) use ($type) {
-            return isset($p['type']) && $p['type'] === $type;
-        });
-    }
-    public function filterBySize($size)
-    {
-        $this->selectedSize = $size;
-
-        $this->products = array_filter($this->allProducts, function ($product) use ($size) {
-            return isset($product['size']) && $product['size'] === $size;
-        });
+        $this->applyFilters();
     }
 
     public function toggleSize($size)
@@ -54,24 +44,28 @@ class Productshome extends Component
         } else {
             $this->selectedSizes[] = $size;
         }
+
         $this->applyFilters();
     }
 
     public function resetFilters()
     {
-        $this->selectedBrand = null;
-        $this->selectedSizes = [];
         $this->selectedType = null;
+        $this->selectedSizes = [];
         $this->products = $this->allProducts;
+        shuffle($this->products);
     }
 
     private function applyFilters()
     {
         $this->products = array_filter($this->allProducts, function ($p) {
-            $matchBrand = !$this->selectedBrand || ($p['brand'] ?? null) === $this->selectedBrand;
+            $matchType = !$this->selectedType || ($p['type'] ?? null) === $this->selectedType;
             $matchSize = empty($this->selectedSizes) || in_array($p['size'] ?? null, $this->selectedSizes);
-            return $matchBrand && $matchSize;
+            return $matchType && $matchSize;
         });
+
+        $this->products = array_values($this->products);
+        shuffle($this->products);
     }
 
     public function render()
