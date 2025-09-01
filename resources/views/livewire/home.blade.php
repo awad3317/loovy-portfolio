@@ -144,8 +144,11 @@
                     نقدم مجموعة متنوعة من المنتجات الصحية عالية الجودة للأطفال من مختلف الفئات العمرية
                 </h6>
             </div>
-            {{-- <div class="row g-4 justify-content-center mt-4">
+            <div class="row g-4 justify-content-center mt-4">
                 @foreach ($products as $index => $product)
+                @if($index == 4)
+                    @break
+                @endif
                     <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up"
                         data-aos-delay="{{ 100 * ($index + 1) }}">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
@@ -162,101 +165,7 @@
                         </div>
                     </div>
                 @endforeach
-            </div> --}}
-            <style>
-                .products-slider {
-                    overflow: hidden;
-                    width: 100%;
-                    background: #f8f9fa;
-                    padding: 1rem 0;
-                    position: relative;
-                }
-
-                .slider-track {
-                    display: flex;
-                    gap: 1rem;
-                    animation: scroll-left 40s linear infinite;
-                }
-
-                /* نسخة مكررة لتحقيق حلقة سلسة */
-                .slider-track .product-card {
-                    min-width: 0px;
-                    max-width: 250px;
-                    flex: 0 0 auto;
-                    transition: transform 0.3s;
-                }
-
-                .product-card:hover {
-                    transform: scale(1.05);
-                    z-index: 10;
-                }
-
-                @keyframes scroll-left {
-                    0% {
-                        transform: translateX(0);
-                    }
-
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
-
-                @media (max-width: 768px) {
-                    .slider-track .product-card {
-                        min-width: 150px;
-                    }
-                }
-
-                @media (max-width: 480px) {
-                    .slider-track .product-card {
-                        min-width: 120px;
-                    }
-                }
-            </style>
-
-            <div class="products-slider" id="productsSlider">
-                <div class="slider-track">
-                    @foreach ($products as $product)
-                        <div class="card product-card border-0 shadow-sm rounded-4 text-center">
-                            <img src="{{ asset($product['image']) }}"
-                                class="card-img-top mx-auto rounded-top img-fluid" alt="{{ $product['name'] }}"
-                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold mb-2">{{ $product['name'] }}</h5>
-                                <p class="card-text text-muted small">{{ $product['description'] }}</p>
-                            </div>
-                        </div>
-                    @endforeach
-
-                    @foreach ($products as $product)
-                        <div class="card product-card border-0 shadow-sm rounded-4 text-center">
-                            <img src="{{ asset($product['image']) }}"
-                                class="card-img-top mx-auto rounded-top img-fluid" alt="{{ $product['name'] }}"
-                                style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold mb-2">{{ $product['name'] }}</h5>
-                                <p class="card-text text-muted small">{{ $product['description'] }}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                    
-                </div>
             </div>
-
-            <script>
-                const slider = document.getElementById('productsSlider');
-                const track = slider.querySelector('.slider-track');
-
-                slider.addEventListener('mouseenter', () => {
-                    track.style.animationPlayState = 'paused';
-                });
-
-                slider.addEventListener('mouseleave', () => {
-                    track.style.animationPlayState = 'running';
-                });
-            </script>
-
-
         </div>
     </section>
 

@@ -40,30 +40,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer-style.css') }}" rel="stylesheet">
-</head>
-<body>
-    @livewireStyles
-
-    <!-- Loader مؤقت -->
-    <div class="initial-loader">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">جاري التحميل...</span>
-        </div>
-    </div>
-
-    @yield('navbar')
-    
-    <main class="py-0">
-        @yield('content')
-    </main>
-    <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/967770662355?text=مرحباً%20أود%20الاستفسار%20عن%20منتجاتكم" 
-   class="whatsapp-float" 
-   target="_blank">
-   <i class="fab fa-whatsapp"></i>
-</a>
-
-<style>
+    <style>
 .whatsapp-float {
     position: fixed;
     bottom: 80px;
@@ -89,6 +66,30 @@
     transform: scale(1.1);
 }
 </style>
+</head>
+<body>
+    @livewireStyles
+
+    <!-- Loader مؤقت -->
+    <div class="initial-loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">جاري التحميل...</span>
+        </div>
+    </div>
+
+    @yield('navbar')
+    
+    <main class="py-0">
+        @yield('content')
+    </main>
+    <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/967770662355?text=مرحباً%20أود%20الاستفسار%20عن%20منتجاتكم" 
+   class="whatsapp-float" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+
     @include('partials.footer')
     @livewireScripts
     <!-- JS مع defer -->

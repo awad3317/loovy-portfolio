@@ -24,7 +24,7 @@
                     <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/') ? 'active-nav-item' : '' }}" href="/">الرئيسية</a>
                 </li>
                 <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="{{url('Home')}}">عن الشركة</a>
+                    <a class="nav-link text-white fw-semibold fs-5" href="/about">عن الشركة</a>
                 </li>
                 <li class="nav-item px-1 custom-dropdown">
                     <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/loovyBaby') ? 'active-nav-item' : '' }}" href="#" id="productsLink">
@@ -34,14 +34,13 @@
                         <li><a class="custom-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
                         <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
                         <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
-
                     </ul>
                 </li>
                 <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="#">فروعنا</a>
+                    <a class="nav-link text-white fw-semibold fs-5" href="/branches">فروعنا</a>
                 </li>
                 <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="#">تواصل معنا</a>
+                    <a class="nav-link text-white fw-semibold fs-5" href="/contact">تواصل معنا</a>
                 </li>
             </ul>
         </div>
@@ -65,7 +64,7 @@
                 </a>
             </li>
             <li class="nav-item" style="flex: 1; min-width: 0;">
-                <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);">
+                <a class="nav-link text-white text-center px-1" href="/about" style="font-size: clamp(10px, 2.5vw, 16px);">
                     <i class="fas fa-info-circle d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
                     <small>عننا</small>
                 </a>
@@ -79,18 +78,18 @@
                     <ul class="mobile-dropdown-menu">
                         <li><a class="mobile-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
                         <li><a class="mobile-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
-                        <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
+                        <li><a class="mobile-dropdown-item" href="/all_product">الكل</a></li>
                     </ul>
                 </div>
             </li>
             <li class="nav-item" style="flex: 1; min-width: 0;">
-                <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);">
+                <a class="nav-link text-white text-center px-1" href="/branches" style="font-size: clamp(10px, 2.5vw, 16px);">
                     <i class="fas fa-map-marker-alt d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
                     <small>فروعنا</small>
                 </a>
             </li>
             <li class="nav-item" style="flex: 1; min-width: 0;">
-                <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);">
+                <a class="nav-link text-white text-center px-1" href="/contact" style="font-size: clamp(10px, 2.5vw, 16px);">
                     <i class="fas fa-envelope d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
                     <small>تواصل</small>
                 </a>

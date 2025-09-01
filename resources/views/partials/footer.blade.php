@@ -19,10 +19,10 @@
                 <h6 class="fw-bold mb-3">روابط سريعة</h6>
                 <ul class="list-unstyled small">
                     <li class="mb-2"><a href="/" class="text-white text-decoration-none">الرئيسية</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">عن الشركة</a></li>
+                    <li class="mb-2"><a href="/about" class="text-white text-decoration-none">عن الشركة</a></li>
                     <li class="mb-2"><a href="/all_product" class="text-white text-decoration-none">منتجاتنا</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">فروعنا</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">تواصل معنا</a></li>
+                    <li class="mb-2"><a href="/branches" class="text-white text-decoration-none">فروعنا</a></li>
+                    <li class="mb-2"><a href="/contact" class="text-white text-decoration-none">تواصل معنا</a></li>
                 </ul>
             </div>
 
