@@ -199,7 +199,7 @@
                                 <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
-                                        <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf"
+                                        <a href="{{ asset('files/Baby_diaper_PCOC.pdf') }}" download="شهادة_الأيزو_9001.pdf"
                                             style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                                             <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
@@ -220,14 +220,15 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
-                                        <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf"
+                                        <h5 class="fw-bold mb-1">شهاده مطابقة للمنتجات الخاضعه للوائح من السعوديه</h5>
+                                        <a href="{{ asset('files/FIRST_FACTORY-9K-FINAL.pdf') }}" download="شهاده مطابقة للمنتجات الخاضعه للوائح من السعوديه.pdf"
                                             style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                                             <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
                                     </div>
                                     <p class="text-muted mb-0 small">
-                                        حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل
+                                        حصلنا على شهادة اشهاده مطابقة للمنتجات الخاضعه للوائح من السعوديه
+                                        لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل
                                         الممارسات في جميع عملياتنا.
                                     </p>
                                 </div>
@@ -242,14 +243,15 @@
                                 </div>
                                 <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
-                                        <a href="/path/to/iso-9001-certificate.pdf" download="شهادة_الأيزو_9001.pdf"
+                                        <h5 class="fw-bold mb-1">شهاده ممارسة التصنيع الجيد من اليمن</h5>
+                                        <a href="{{ asset('files/GMP_Level_A.pdf') }}" download="شهاده ممارسة التصنيع الجيد من اليمن.pdf"
                                             style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                                             <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
                                     </div>
                                     <p class="text-muted mb-0 small">
-                                        حصلنا على شهادة الأيزو 9001 لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل
+                                        حصلنا على شهاده ممارسة التصنيع الجيد من اليمن
+                                        لنظام إدارة الجودة، مما يؤكد التزامنا بتطبيق أفضل
                                         الممارسات في جميع عملياتنا.
                                     </p>
                                 </div>
