@@ -2,13 +2,11 @@
     <style>
         .nav-tabs .nav-link.active {
             background-color: #253E69 !important;
-            color: #fff !important;
+            color: white !important;
             border-color: #253E69 #fff !important;
         }
 
-        .nav-tabs .nav-link:hover {
-            color: #253E69 !important;
-        }
+        
     </style>
     <section class="py-1">
         <div class="container py-5">
@@ -299,7 +297,7 @@
                     {{-- Tabs الدولة --}}
                     <ul class="nav nav-tabs mb-3" id="countryTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="yemen-tab" data-bs-toggle="tab"
+                            <button class="nav-link active text-dark" id="yemen-tab" data-bs-toggle="tab"
                                 data-bs-target="#yemen" type="button" role="tab">اليمن</button>
                         </li>
                         <li class="nav-item" role="presentation">
