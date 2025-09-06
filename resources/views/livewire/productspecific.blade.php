@@ -133,29 +133,27 @@
         </div>
 
         <div class="row mb-5">
-    <div class="col-md-5 product-image" x-data="{ mainImage: '{{ asset($product['image']) }}' }">
-    <!-- الصورة الرئيسية -->
-    <div class="img-placeholder mb-3">
-        <img :src="mainImage" 
-             alt="{{ $product['name'] }}"
-             class="card-img-top mx-auto rounded-top img-fluid"
-             style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
-    </div>
+            <div class="col-md-5 product-image" x-data="{ mainImage: '{{ asset($product['image']) }}' }">
+                <!-- الصورة الرئيسية -->
+                <div class="img-placeholder mb-3">
+                    <img :src="mainImage" alt="{{ $product['name'] }}"
+                        class="card-img-top mx-auto rounded-top img-fluid"
+                        style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
+                </div>
 
-    <!-- الصور الفرعية -->
-    <div class="row mt-3">
-        @foreach($product['images'] as $img)
-            <div class="col-3">
-                <div class="img-placeholder" style="height: 80px;">
-                    <img src="{{ asset($img) }}" 
-                         class="img-fluid" 
-                         style="height: 150%; width: 150%; cursor: pointer;"
-                         @click="mainImage = '{{ asset($img) }}'">
+                <!-- الصور الفرعية -->
+                <div class="row mt-3">
+                    @foreach ($product['images'] as $img)
+                        <div class="col-3">
+                            <div class="img-placeholder" style="height: 80px;">
+                                <img src="{{ asset($img) }}" class="img-fluid"
+                                    style="height: 150%; width: 150%; cursor: pointer;"
+                                    @click="mainImage = '{{ asset($img) }}'">
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-        @endforeach
-    </div>
-</div>
 
 
             <div class="col-md-7">
@@ -180,8 +178,7 @@
                         class="text-decoration-none text-dark">
                         <div class="card product-card h-100">
                             <img src="{{ asset($item['image']) }}" class="card-img-top" alt="{{ $item['name'] }}"
-                            class="card-img-top mx-auto rounded-top img-fluid" 
-                                alt="منتج"
+                                class="card-img-top mx-auto rounded-top img-fluid" alt="منتج"
                                 style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $item['name'] }}</h5>

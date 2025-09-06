@@ -7,6 +7,10 @@ use Livewire\Component;
 class Home extends Component
 {
     public $products = [];
+    public $branches = [
+        'yemen' => [],
+        'saudi' => [],
+    ];
 
     public function mount()
     {
@@ -23,8 +27,15 @@ class Home extends Component
         }
 
         shuffle($this->products);
-
         $this->products = array_merge($this->products, $this->products);
+
+        $allBranches = config('branches'); 
+        if (isset($allBranches['yemen'])) {
+            $this->branches['yemen'] = $allBranches['yemen'];
+        }
+        if (isset($allBranches['saudi'])) {
+            $this->branches['saudi'] = $allBranches['saudi'];
+        }
     }
 
     public function render()

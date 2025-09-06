@@ -1,5 +1,15 @@
 <div>
+    <style>
+        .nav-tabs .nav-link.active {
+            background-color: #253E69 !important;
+            color: #fff !important;
+            border-color: #253E69 #fff !important;
+        }
 
+        .nav-tabs .nav-link:hover {
+            color: #253E69 !important;
+        }
+    </style>
     <section class="py-1">
         <div class="container py-5">
             <div class="text-center mb-5">
@@ -146,9 +156,9 @@
             </div>
             <div class="row g-4 justify-content-center mt-4">
                 @foreach ($products as $index => $product)
-                @if($index == 4)
-                    @break
-                @endif
+                    @if ($index == 4)
+                        @break
+                    @endif
                     <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up"
                         data-aos-delay="{{ 100 * ($index + 1) }}">
                         <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
@@ -165,6 +175,13 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="text-center mt-4">
+                <a href="{{ url('all_product') }}" class="btn text-white rounded-4 px-5 fw-bold"
+                    style="background-color: #2b3b6b; font-size: 1.5rem; font-weight: 900;">
+                    عرض جميع المنتجات
+                </a>
+
             </div>
         </div>
     </section>
@@ -199,7 +216,8 @@
                                 <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهادة الأيزو 9001</h5>
-                                        <a href="{{ asset('files/Baby_diaper_PCOC.pdf') }}" download="شهادة_الأيزو_9001.pdf"
+                                        <a href="{{ asset('files/Baby_diaper_PCOC.pdf') }}"
+                                            download="شهادة_الأيزو_9001.pdf"
                                             style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                                             <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
@@ -221,7 +239,8 @@
                                 <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهاده مطابقة للمنتجات الخاضعه للوائح من السعوديه</h5>
-                                        <a href="{{ asset('files/FIRST_FACTORY-9K-FINAL.pdf') }}" download="شهاده مطابقة للمنتجات الخاضعه للوائح من السعوديه.pdf"
+                                        <a href="{{ asset('files/FIRST_FACTORY-9K-FINAL.pdf') }}"
+                                            download="شهاده مطابقة للمنتجات الخاضعه للوائح من السعوديه.pdf"
                                             style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                                             <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
@@ -244,7 +263,8 @@
                                 <div class="flex-grow-1">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="fw-bold mb-1">شهاده ممارسة التصنيع الجيد من اليمن</h5>
-                                        <a href="{{ asset('files/GMP_Level_A.pdf') }}" download="شهاده ممارسة التصنيع الجيد من اليمن.pdf"
+                                        <a href="{{ asset('files/GMP_Level_A.pdf') }}"
+                                            download="شهاده ممارسة التصنيع الجيد من اليمن.pdf"
                                             style="transition: all 0.3s; transform: translateY(-2px);box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                                             <i class="fas fa-download me-1" style="color: #2b3b6b"></i>
                                         </a>
@@ -276,79 +296,64 @@
             </div>
             <div class="row align-items-start gy-4">
                 <div class="col-lg-6">
-                    <div class="d-flex flex-column gap-3"
+                    {{-- Tabs الدولة --}}
+                    <ul class="nav nav-tabs mb-3" id="countryTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="yemen-tab" data-bs-toggle="tab"
+                                data-bs-target="#yemen" type="button" role="tab">اليمن</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="saudi-tab" data-bs-toggle="tab" data-bs-target="#saudi"
+                                type="button" role="tab">السعودية</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="countryTabContent"
                         style="max-height: 550px; overflow-y: auto; direction: ltr;">
-
-                        <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold mb-3">فرع حضرموت - سيئون</h5>
-                                <div class="d-flex align-items-center mb-2 text-muted">
-                                    <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                    <span>شارع سيئون، الخط الرئيسي مقابل...</span>
-                                </div>
-                                <div class="d-flex align-items-center text-muted">
-                                    <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                    <span>+967 777 777 777</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold mb-3">فرع حضرموت - سيئون</h5>
-                                <div class="d-flex align-items-center mb-2 text-muted">
-                                    <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                    <span>شارع سيئون، الخط الرئيسي مقابل...</span>
-                                </div>
-                                <div class="d-flex align-items-center text-muted">
-                                    <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                    <span>+967 777 777 777</span>
-                                </div>
+                        {{-- تبويب اليمن --}}
+                        <div class="tab-pane fade show active" id="yemen" role="tabpanel">
+                            <div class="d-flex flex-column gap-3">
+                                @foreach ($branches['yemen'] as $branch)
+                                    <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-semibold mb-3">{{ $branch['name'] }}</h5>
+                                            <div class="d-flex align-items-center mb-2 text-muted">
+                                                <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
+                                                <span>{{ $branch['address'] }}</span>
+                                            </div>
+                                            <div class="d-flex align-items-center text-muted">
+                                                <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
+                                                <span>{{ $branch['phone'] }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
 
-                        <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold mb-3">فرع عدن - المنصورة</h5>
-                                <div class="d-flex align-items-center mb-2 text-muted">
-                                    <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                    <span>الشارع الرئيسي - المنصورة - بجانب دوار كالتكس</span>
-                                </div>
-                                <div class="d-flex align-items-center text-muted">
-                                    <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                    <span>+967 733 333 333</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold mb-3">فرع صنعاء - شارع الجزائر</h5>
-                                <div class="d-flex align-items-center mb-2 text-muted">
-                                    <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                    <span>صنعاء، شارع الجزائر، بجانب مستشفى...</span>
-                                </div>
-                                <div class="d-flex align-items-center text-muted">
-                                    <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                    <span>+967 711 111 111</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                            <div class="card-body">
-                                <h5 class="card-title fw-semibold mb-3">فرع صنعاء - شارع الجزائر</h5>
-                                <div class="d-flex align-items-center mb-2 text-muted">
-                                    <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                    <span>صنعاء، شارع الجزائر، بجانب مستشفى...</span>
-                                </div>
-                                <div class="d-flex align-items-center text-muted">
-                                    <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                    <span>+967 711 111 111</span>
-                                </div>
+                        {{-- تبويب السعودية --}}
+                        <div class="tab-pane fade" id="saudi" role="tabpanel">
+                            <div class="d-flex flex-column gap-3">
+                                @foreach ($branches['saudi'] as $branch)
+                                    <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-semibold mb-3">{{ $branch['name'] }}</h5>
+                                            <div class="d-flex align-items-center mb-2 text-muted">
+                                                <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
+                                                <span>{{ $branch['address'] }}</span>
+                                            </div>
+                                            <div class="d-flex align-items-center text-muted">
+                                                <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
+                                                <span>{{ $branch['phone'] }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="col-lg-6 text-center">
                     <div class="rounded-4 shadow-sm overflow-hidden" style="height: 550px;">

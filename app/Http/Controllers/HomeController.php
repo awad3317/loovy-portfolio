@@ -30,17 +30,15 @@ public function showProduct($type, $id)
         abort(404, "النوع $type غير موجود");
     }
 
-    // البحث عن المنتج بالـ id
     $product = collect($configType['products'])->firstWhere('id', $id);
 
     if (!$product) {
         abort(404, "المنتج غير موجود");
     }
 
-    // جلب جميع المنتجات من نفس النوع (يمكن استثناء المنتج الحالي لو أحببت)
     $similarProducts = collect($configType['products'])->filter(function($p) use ($id) {
-        return $p['id'] != $id; // استثناء المنتج الحالي
-    })->take(4)
+        return $p['id'] != $id;
+        })->take(4)
     ->values();
 
     return view('product_specifc', [

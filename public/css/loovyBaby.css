@@ -43,4 +43,12 @@
             outline: none;
             box-shadow: none;
         }
-        
+            .nav-tabs .nav-link.active {
+            background-color: var(#253E69);
+            color: white;
+            border: none;
+        }
+
+        .nav-tabs .nav-link {
+            color: var(#253E69);
+        }

@@ -1,4 +1,5 @@
-<section style="
+<section
+    style="
     background-image: url('{{ asset('images/Rectangle.png') }}'); 
     background-size: cover; 
     background-position: center; 
@@ -6,127 +7,141 @@
     min-height: 80vh;
     position: relative;
 ">
-<nav class="navbar navbar-expand-lg  fixed-lg-bottom">
-    <div class="container-fluid d-flex  align-items-center">
-         <a class="ms-1 justify-content-start" href="#" style="z-index: 1050;">
-                <img src="{{asset('images/logo.png')}}" alt="شعار الشركة" width="100">
-        </a>
-        <div class="collapse navbar-collapse justify-content-center d-none d-l-flex" id="navContent">
-            <ul class="navbar-nav d-flex flex-row gap-5 rounded-5 px-5 py-3" style="
+    <nav class="navbar navbar-expand-lg  fixed-lg-bottom">
+        <div class="container-fluid d-flex  align-items-center">
+            <a class="ms-1 justify-content-start" href="#" style="z-index: 1050;">
+                <img src="{{ asset('images/logo.png') }}" alt="شعار الشركة" width="100">
+            </a>
+            <div class="collapse navbar-collapse justify-content-center d-none d-l-flex" id="navContent">
+                <ul class="navbar-nav d-flex flex-row gap-5 rounded-5 px-5 py-3"
+                    style="
                 background-color: rgba(43, 59, 107, 0.85); 
                 backdrop-filter: blur(8px); 
                 width: auto;
                 max-width: 95%;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                 border: 1px solid rgba(255,255,255,0.1);">
-               
-                <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/') ? 'active-nav-item' : '' }}" href="/">الرئيسية</a>
-                </li>
-                <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="/about">عن الشركة</a>
-                </li>
-                <li class="nav-item px-1 custom-dropdown">
-                    <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/loovyBaby') ? 'active-nav-item' : '' }}" href="#" id="productsLink">
-                      منتجاتنا
-                    </a>
-                    <ul class="custom-dropdown-menu">
-                        <li><a class="custom-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
-                        <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
-                        <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="/branches">فروعنا</a>
-                </li>
-                <li class="nav-item px-1">
-                    <a class="nav-link text-white fw-semibold fs-5" href="/contact">تواصل معنا</a>
-                </li>
-            </ul>
-        </div>
-        <a class="me-1 justify-content-start" href="#" style="z-index: 1050;">
+
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/') ? 'active-nav-item' : '' }}"
+                            href="/">الرئيسية</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-white fw-semibold fs-5" href="/about">عن الشركة</a>
+                    </li>
+                    <li class="nav-item px-1 custom-dropdown">
+                        <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/loovyBaby') ? 'active-nav-item' : '' }}"
+                            href="#" id="productsLink">
+                            منتجاتنا
+                        </a>
+                        <ul class="custom-dropdown-menu">
+                            <li><a class="custom-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
+                            <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
+                            <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-white fw-semibold fs-5" href="/branches">فروعنا</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-white fw-semibold fs-5" href="/contact">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="me-1 justify-content-start" href="#" style="z-index: 1050;">
                 {{-- <img src="{{asset('images/search.png')}}" alt="شعار الشركة" width="40"> --}}
-        </a>
-        
-        <div class="d-lg-none fixed-bottom py-2 px-2">
-    <div class="container">
-        <ul class="nav justify-content-between rounded-5 px-2 py-1" style="
+            </a>
+
+            <div class="d-lg-none fixed-bottom py-2 px-2">
+                <div class="container">
+                    <ul class="nav justify-content-between rounded-5 px-2 py-1"
+                        style="
                 background-color: rgba(43, 59, 107, 0.85); 
                 backdrop-filter: blur(5px); 
                 max-width: 100%;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                 border: 1px solid rgba(255,255,255,0.1); 
             ">
-            <li class="nav-item" style="flex: 1; min-width: 0;">
-                <a class="nav-link text-white text-center px-1" href="/" style="font-size: clamp(10px, 2.5vw, 16px);"> <!-- حجم خط متجاوب -->
-                    <i class="fas fa-home d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i> <!-- حجم أيقونة متجاوب -->
-                    <small>الرئيسية</small>
-                </a>
-            </li>
-            <li class="nav-item" style="flex: 1; min-width: 0;">
-                <a class="nav-link text-white text-center px-1" href="/about" style="font-size: clamp(10px, 2.5vw, 16px);">
-                    <i class="fas fa-info-circle d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
-                    <small>عننا</small>
-                </a>
-            </li>
-           <li class="nav-item" style="flex: 1; min-width: 0;">
-                <div class="mobile-dropdown">
-                    <a class="nav-link text-white text-center px-1" href="#" style="font-size: clamp(10px, 2.5vw, 16px);">
-                        <i class="fas fa-box-open d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
-                        <small>منتجاتنا</small>
-                    </a>
-                    <ul class="mobile-dropdown-menu">
-                        <li><a class="mobile-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
-                        <li><a class="mobile-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
-                        <li><a class="mobile-dropdown-item" href="/all_product">الكل</a></li>
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <a class="nav-link text-white text-center px-1" href="/"
+                                style="font-size: clamp(10px, 2.5vw, 16px);"> <!-- حجم خط متجاوب -->
+                                <i class="fas fa-home d-block mx-auto mb-1"
+                                    style="font-size: clamp(12px, 3vw, 20px);"></i> <!-- حجم أيقونة متجاوب -->
+                                <small>الرئيسية</small>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <a class="nav-link text-white text-center px-1" href="/about"
+                                style="font-size: clamp(10px, 2.5vw, 16px);">
+                                <i class="fas fa-info-circle d-block mx-auto mb-1"
+                                    style="font-size: clamp(12px, 3vw, 20px);"></i>
+                                <small>عننا</small>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <div class="mobile-dropdown">
+                                <a class="nav-link text-white text-center px-1" href="#"
+                                    style="font-size: clamp(10px, 2.5vw, 16px);">
+                                    <i class="fas fa-box-open d-block mx-auto mb-1"
+                                        style="font-size: clamp(12px, 3vw, 20px);"></i>
+                                    <small>منتجاتنا</small>
+                                </a>
+                                <ul class="mobile-dropdown-menu">
+                                    <li><a class="mobile-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
+                                    <li><a class="mobile-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
+                                    <li><a class="mobile-dropdown-item" href="/all_product">الكل</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <a class="nav-link text-white text-center px-1" href="/branches"
+                                style="font-size: clamp(10px, 2.5vw, 16px);">
+                                <i class="fas fa-map-marker-alt d-block mx-auto mb-1"
+                                    style="font-size: clamp(12px, 3vw, 20px);"></i>
+                                <small>فروعنا</small>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <a class="nav-link text-white text-center px-1" href="/contact"
+                                style="font-size: clamp(10px, 2.5vw, 16px);">
+                                <i class="fas fa-envelope d-block mx-auto mb-1"
+                                    style="font-size: clamp(12px, 3vw, 20px);"></i>
+                                <small>تواصل</small>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-            </li>
-            <li class="nav-item" style="flex: 1; min-width: 0;">
-                <a class="nav-link text-white text-center px-1" href="/branches" style="font-size: clamp(10px, 2.5vw, 16px);">
-                    <i class="fas fa-map-marker-alt d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
-                    <small>فروعنا</small>
-                </a>
-            </li>
-            <li class="nav-item" style="flex: 1; min-width: 0;">
-                <a class="nav-link text-white text-center px-1" href="/contact" style="font-size: clamp(10px, 2.5vw, 16px);">
-                    <i class="fas fa-envelope d-block mx-auto mb-1" style="font-size: clamp(12px, 3vw, 20px);"></i>
-                    <small>تواصل</small>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-</div>
-</nav>
-        
-</nav>
-  
-    
-    <div class="container mt-5">
-        <div class="row align-items-center">
-            <div class="col-lg-6 intro-text text-lg-start text-center" data-aos="fade-left" 
-                 data-aos-duration="800"
-                 data-aos-delay="200">
-    <h4 class="fw-bold text-dark">شركة المصنع الأول للصناعات الصحية المحدودة</h4>
-    <p class="mt-3 mb-4 text-secondary">
-        نلتزم في الصناعات الصحية بتقديم منتجات آمنة وموثوقة تلبي أعلى معايير الجودة العالمية،
-        لنضمن راحة وصحة أطفالكم في كل لحظة.
-    </p> 
-    <div class="d-lg-block d-flex justify-content-center">
-        <a href="/all_product">
-            <button class="btn text-white rounded-4 px-5 fw-bold"
-                style="background-color: #2b3b6b; font-size: 1.5rem; font-weight: 900;">
-                أكتشف منتجاتنا
-            </button>
-        </a>
-        
-    </div>
-</div>
-            <div class="col-lg-6 text-center intro-image">
-                <img src="{{ asset('images/lofy1.png') }}" alt="صورة المنتجات" class="img-fluid" >
             </div>
         </div>
+    </nav>
+
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 intro-text text-lg-start text-center" data-aos="fade-left" data-aos-duration="800"
+                data-aos-delay="200">
+                <h4 class="fw-bold text-dark">شركة المصنع الأول للصناعات الصحية المحدودة</h4>
+                <p class="mt-3 mb-4 text-secondary">
+                    نلتزم في الصناعات الصحية بتقديم منتجات آمنة وموثوقة تلبي أعلى معايير الجودة العالمية،
+                    لنضمن راحة وصحة أطفالكم في كل لحظة.
+                </p>
+                <div class="d-lg-block d-flex justify-content-center">
+                    <a href="/all_product">
+                        <button class="btn text-white rounded-4 px-5 fw-bold"
+                            style="background-color: #2b3b6b; font-size: 1.5rem; font-weight: 900;">
+                            أكتشف منتجاتنا
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-lg-6 text-center intro-image" style="margin-top: 20vh;">
+                <img src="{{ asset('images/lofy1.png') }}" style="width: 100%;height: 100%;" alt="صورة المنتجات" class="img-fluid">
+            </div>
+        </div>
+
     </div>
- 
+
 </section>
