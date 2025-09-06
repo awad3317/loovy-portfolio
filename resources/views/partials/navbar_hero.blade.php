@@ -137,7 +137,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-6 text-center intro-image" style="margin-top: 20vh;">
+            <div class="col-lg-6 text-center intro-image">
                 <img src="{{ asset('images/lofy1.png') }}" style="width: 100%;height: 100%;" alt="صورة المنتجات" class="img-fluid">
             </div>
         </div>
