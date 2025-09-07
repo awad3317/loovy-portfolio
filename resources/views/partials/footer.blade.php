@@ -1,7 +1,6 @@
 <footer class="bg-dark text-white pt-5 pb-3" style="background-color: #243b6f !important;">
     <div class="container">
         <div class="row gy-4">
-            <!-- العمود 1: معلومات الشركة -->
             <div class="col-12 col-md-4 text-center text-md-start">
                 <h5 class="fw-bold mb-3">شركة المصنع الأول للصناعات الصحية المحدودة</h5>
                 <p class="mt-3 small">
@@ -14,7 +13,6 @@
                 </div>
             </div>
 
-            <!-- العمود 2: روابط سريعة -->
             <div class="col-6 col-md-4 text-center">
                 <h6 class="fw-bold mb-3">روابط سريعة</h6>
                 <ul class="list-unstyled small">
@@ -26,7 +24,6 @@
                 </ul>
             </div>
 
-            <!-- العمود 3: اتصل بنا -->
             <div class="col-6 col-md-4 text-center">
                 <h6 class="fw-bold mb-3">اتصل بنا</h6>
                 <ul class="list-unstyled small">
@@ -38,6 +35,16 @@
                     </li>
                     <li class="mb-1 d-flex align-items-center justify-content-center justify-content-md-center">
                         <i class="bi bi-envelope-fill me-2"></i> info@gmail.com
+                    </li>
+
+                    <li class="mb-2 d-flex align-items-center justify-content-center justify-content-md-center">
+                        <i class="bi bi-geo-alt-fill me-2"></i>المملكة العربية السعودية، جدة
+                    </li>
+                    <li class="mb-2 d-flex align-items-center justify-content-center justify-content-md-center">
+                        <i class="bi bi-telephone-fill me-2"></i> +966 558885413
+                    </li>
+                    <li class="mb-1 d-flex align-items-center justify-content-center justify-content-md-center">
+                        <i class="bi bi-envelope-fill me-2"></i> info@loovybaby.com
                     </li>
                 </ul>
             </div>
