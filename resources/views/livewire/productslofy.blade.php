@@ -66,7 +66,7 @@
 
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                     <button wire:click="resetFilter"
-                        class="custom-btn btn w-100 border rounded-3 py-3 px-3 fw-semibold btn-primary">
+                        class="custom-btn btn w-100 border rounded-3 py-3 px-3 fw-semibold btn-primary"style="background-color: #2b3b6b;">
                         عرض الكل
                     </button>
                 </div>
