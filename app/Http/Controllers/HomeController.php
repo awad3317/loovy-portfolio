@@ -22,31 +22,45 @@ class HomeController extends Controller
         return view('all_product',);
     }
 
-public function showProduct($type, $id)
-{
-    $configType = config("products.$type");
+    public function showProduct($type, $id)
+    {
+        $configType = config("products.$type");
 
-    if (!$configType || !isset($configType['products']) || !is_array($configType['products'])) {
-        abort(404, "النوع $type غير موجود");
-    }
+        if (!$configType || !isset($configType['products']) || !is_array($configType['products'])) {
+            abort(404, "النوع $type غير موجود");
+        }
 
-    $product = collect($configType['products'])->firstWhere('id', $id);
+        $product = collect($configType['products'])->firstWhere('id', $id);
 
-    if (!$product) {
-        abort(404, "المنتج غير موجود");
-    }
+        if (!$product) {
+            abort(404, "المنتج غير موجود");
+        }
 
-    $similarProducts = collect($configType['products'])->filter(function($p) use ($id) {
-        return $p['id'] != $id;
+        $similarProducts = collect($configType['products'])->filter(function ($p) use ($id) {
+            return $p['id'] != $id;
         })->take(4)
-    ->values();
+            ->values();
 
-    return view('product_specifc', [
-        'product' => $product,
-        'type' => $type,
-        'id' => $id,
-        'similarProducts' => $similarProducts,
-    ]);
-}
+        return view('product_specifc', [
+            'product' => $product,
+            'type' => $type,
+            'id' => $id,
+            'similarProducts' => $similarProducts,
+        ]);
+    }
 
+    public function ShowBranch()
+    {
+        $allBranches = config('branches');
+
+        $branches = [];
+        if (isset($allBranches['yemen'])) {
+            $branches['yemen'] = $allBranches['yemen'];
+        }
+        if (isset($allBranches['saudi'])) {
+            $branches['saudi'] = $allBranches['saudi'];
+        }
+
+        return view('branches', compact('branches')); 
+    }
 }

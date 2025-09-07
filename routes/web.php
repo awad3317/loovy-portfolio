@@ -10,9 +10,9 @@ Route::get('/', function () {
 Route::get('/productspecific', function () {
     return view(view: 'product_specifc');
 });
-Route::get('/branches', function () {
-    return view(view: 'branches');
-});
+// Route::get('/branches', function () {
+//     return view(view: 'branches');
+// });
 Route::get('/contact', function () {
     return view(view: 'contact');
 });
@@ -21,6 +21,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/products/{type}/{id}', [HomeController::class, 'showProduct'])->name('products.show');
-Route::get('/calmyBaby', [HomeController::class, 'calmyBaby']);
+Route::get('/calmyBaby', [HomeController::class, 'calmyBaby']); 
+Route::get('/branches', [HomeController::class, 'ShowBranch']);
 Route::get('/lofyBaby', [HomeController::class, 'lofyBaby']);
 Route::get('/all_product', [HomeController::class, 'ALL_product']);
