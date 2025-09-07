@@ -405,7 +405,33 @@
                                 <i class="fa-solid fa-phone text-dark fs-4"></i>
                                 <div>
                                     <h6 class="mb-1 fw-semibold">الهاتف</h6>
-                                    <p class="mb-0 text-muted">+967 777000000</p>
+                                    <p class="mb-0 text-muted">770000000 967+</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 d-flex align-items-center gap-3" data-aos="fade-up"
+                                data-aos-delay="350">
+                                <i class="fa-solid fa-envelope text-dark fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-semibold">البريد الإلكتروني</h6>
+                                    <p class="mb-0 text-muted">info@health-industries.com</p>
+                                </div>
+                            </div>
+                            <div class="mb-4 d-flex align-items-center gap-3" data-aos="fade-up"
+                                data-aos-delay="250">
+                                <i class="fa-solid fa-location-dot text-dark fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-semibold">العنوان</h6>
+                                    <p class="mb-0 text-muted">المملكة العربية السعودية , جدة</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 d-flex align-items-center gap-3" data-aos="fade-up"
+                                data-aos-delay="300">
+                                <i class="fa-solid fa-phone text-dark fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1 fw-semibold">الهاتف</h6>
+                                    <p class="mb-0 text-muted">558885413 966+</p>
                                 </div>
                             </div>
 
@@ -414,7 +440,7 @@
                                 <i class="fa-solid fa-envelope text-dark fs-4"></i>
                                 <div>
                                     <h6 class="mb-1 fw-semibold">البريد الإلكتروني</h6>
-                                    <p class="mb-0 text-muted">info@health-industries.com</p>
+                                    <p class="mb-0 text-muted">info@loovybaby.com</p>
                                 </div>
                             </div>
                         </div>
