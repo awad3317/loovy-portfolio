@@ -31,7 +31,7 @@
                         <i class="bi bi-geo-alt-fill me-2"></i> اليمن، حضرموت، سيئون
                     </li>
                     <li class="mb-2 d-flex align-items-center justify-content-center justify-content-md-center">
-                        <i class="bi bi-telephone-fill me-2"></i> +967 770000000
+                        <i class="bi bi-telephone-fill me-2"></i>770000000 967+ 
                     </li>
                     <li class="mb-1 d-flex align-items-center justify-content-center justify-content-md-center">
                         <i class="bi bi-envelope-fill me-2"></i> info@gmail.com
@@ -41,7 +41,7 @@
                         <i class="bi bi-geo-alt-fill me-2"></i>المملكة العربية السعودية، جدة
                     </li>
                     <li class="mb-2 d-flex align-items-center justify-content-center justify-content-md-center">
-                        <i class="bi bi-telephone-fill me-2"></i> +966 558885413
+                        <i class="bi bi-telephone-fill me-2"></i>558885413 966+ 
                     </li>
                     <li class="mb-1 d-flex align-items-center justify-content-center justify-content-md-center">
                         <i class="bi bi-envelope-fill me-2"></i> info@loovybaby.com
