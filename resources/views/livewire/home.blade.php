@@ -5,6 +5,14 @@
             color: white !important;
             border-color: #253E69 #fff !important;
         }
+        .nav-tabs .nav-link.active:hover {
+            color: white !important;
+            background-color: #1a2d4d !important;
+        }
+         .nav-tabs .nav-link:hover {
+            color: #253E69 !important;
+            background-color: #f8f9fa !important;
+        }
 
         
     </style>
@@ -294,7 +302,6 @@
             </div>
             <div class="row align-items-start gy-4">
                 <div class="col-lg-6">
-                    {{-- Tabs الدولة --}}
                     <ul class="nav nav-tabs mb-3" id="countryTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active text-dark" id="yemen-tab" data-bs-toggle="tab"
