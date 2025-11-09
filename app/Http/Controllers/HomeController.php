@@ -2,65 +2,61 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
+use App\Models\Product;
+use App\Models\Branch;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function calmyBaby()
     {
-        $data = config('products.calmy_baby');
-        return view('calmyBaby', compact('data'));
+        $calmy = Brand::with('products')
+        ->where('slug', 'calmy_baby')
+        ->firstOrFail();
+        return view('calmyBaby', compact('calmy'));
     }
 
     public function lofyBaby()
     {
-        $data = config('products.lofy_baby');
-        return view('lofyBaby', compact('data'));
+         $lofy = Brand::with('products', 'features')
+        ->where('slug', 'lofy_baby')
+        ->firstOrFail();
+        return view('lofyBaby', compact('lofy'));
     }
     public function ALL_product()
     {
         return view('all_product',);
     }
 
-    public function showProduct($type, $id)
+      public function showProduct($type, $id)
     {
-        $configType = config("products.$type");
+        $product = Product::with('brand')
+            ->where('type', $type)
+            ->where('id', $id)
+            ->firstOrFail();
 
-        if (!$configType || !isset($configType['products']) || !is_array($configType['products'])) {
-            abort(404, "النوع $type غير موجود");
-        }
+        $similarProducts = Product::where('type', $type)
+            ->where('id', '!=', $id)
+            ->take(4)
+            ->get();
 
-        $product = collect($configType['products'])->firstWhere('id', $id);
-
-        if (!$product) {
-            abort(404, "المنتج غير موجود");
-        }
-
-        $similarProducts = collect($configType['products'])->filter(function ($p) use ($id) {
-            return $p['id'] != $id;
-        })->take(4)
-            ->values();
-
-        return view('product_specifc', [
-            'product' => $product,
-            'type' => $type,
-            'id' => $id,
-            'similarProducts' => $similarProducts,
-        ]);
+        return view('product_specifc', compact('product', 'similarProducts', 'type', 'id'));
     }
 
     public function ShowBranch()
     {
-        $allBranches = config('branches');
+        $allBranchs = Branch::all();
 
-        $branches = [];
-        if (isset($allBranches['yemen'])) {
-            $branches['yemen'] = $allBranches['yemen'];
+        $Branchs = [];
+        if (isset($allBranchs['yemen'])) {
+            $Branchs['yemen'] = $allBranchs['yemen'];
         }
-        if (isset($allBranches['saudi'])) {
-            $branches['saudi'] = $allBranches['saudi'];
+        if (isset($allBranchs['saudi'])) {
+            $Branchs['saudi'] = $allBranchs['saudi'];
         }
 
-        return view('branches', compact('branches')); 
+        return view('Branchs', compact('Branchs')); 
     }
+    
 }

@@ -2,40 +2,22 @@
 
 namespace App\Livewire;
 
+use App\Models\Branch;
+use App\Models\Product;
 use Livewire\Component;
 
 class Home extends Component
 {
+    public $branches = [];
     public $products = [];
-    public $branches = [
-        'yemen' => [],
-        'saudi' => [],
-    ];
 
     public function mount()
     {
-        $allProducts = config('products');
+        // جلب منتجات عشوائية
+        $this->products = Product::inRandomOrder()->take(10)->get();
 
-        $this->products = [];
-
-        if (is_array($allProducts)) {
-            foreach ($allProducts as $type => $data) {
-                if (isset($data['products']) && is_array($data['products'])) {
-                    $this->products = array_merge($this->products, $data['products']);
-                }
-            }
-        }
-
-        shuffle($this->products);
-        $this->products = array_merge($this->products, $this->products);
-
-        $allBranches = config('branches'); 
-        if (isset($allBranches['yemen'])) {
-            $this->branches['yemen'] = $allBranches['yemen'];
-        }
-        if (isset($allBranches['saudi'])) {
-            $this->branches['saudi'] = $allBranches['saudi'];
-        }
+        // تجميع الفروع حسب الدولة
+        $this->branches = Branch::all()->groupBy('country');
     }
 
     public function render()

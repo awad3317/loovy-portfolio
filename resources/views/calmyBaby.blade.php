@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $data['title'])
+@section('title', $calmy->name)
 
 @section('navbar')
     @extends('partials.navbar')
@@ -8,5 +8,5 @@
 
 @section('content')
 
-@livewire('productscalmy', ['type' => 'calmy_baby'])
+@livewire('productscalmy', ['calmy' => $calmy])
 @endsection

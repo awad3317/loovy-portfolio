@@ -128,22 +128,22 @@
 
     <div class="container">
         <div class="product-header p-4 mb-4 text-center">
-            <h1 class="fw-bold">{{ $product['name'] }} -{{ $product['size'] }}</h1>
-            <p class="lead">{{ $product['description'] }}</p>
+            <h1 class="fw-bold">{{ $product->name }} -{{ $product->size }}</h1>
+            <p class="lead">{{ $product->description }}</p>
         </div>
 
         <div class="row mb-5">
-            <div class="col-md-5 product-image" x-data="{ mainImage: '{{ asset($product['image']) }}' }">
+            <div class="col-md-5 product-image" x-data="{ mainImage: '{{ asset($product->image) }}' }">
                 <!-- الصورة الرئيسية -->
                 <div class="img-placeholder mb-3">
-                    <img :src="mainImage" alt="{{ $product['name'] }}"
+                    <img :src="mainImage" alt="{{ $product->name }}"
                         class="card-img-top mx-auto rounded-top img-fluid"
                         style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
                 </div>
 
                 <!-- الصور الفرعية -->
                 <div class="row mt-3">
-                    @foreach ($product['images'] as $img)
+                    @foreach ($product->images as $img)
                         <div class="col-3">
                             <div class="img-placeholder" style="height: 80px;">
                                 <img src="{{ asset($img) }}" class="img-fluid"
@@ -174,15 +174,15 @@
         <div class="row mb-5">
             @foreach ($similarProducts as $item)
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <a href="{{ route('products.show', ['type' => $item['type'], 'id' => $item['id']]) }}"
+                    <a href="{{ route('products.show', ['type' => $item->type, 'id' => $item->id]) }}"
                         class="text-decoration-none text-dark">
                         <div class="card product-card h-100">
-                            <img src="{{ asset($item['image']) }}" class="card-img-top" alt="{{ $item['name'] }}"
+                            <img src="{{ asset($item->image) }}" class="card-img-top" alt="{{ $item->name }}"
                                 class="card-img-top mx-auto rounded-top img-fluid" alt="منتج"
                                 style="object-fit: contain; max-height: 200px; width: auto; object-position: center;">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $item['name'] }}</h5>
-                                <p class="card-text">{{ $item['description'] }}</p>
+                                <h5 class="card-title">{{ $item->name }}</h5>
+                                <p class="card-text">{{ $item->description }}</p>
                             </div>
                         </div>
                     </a>
@@ -217,7 +217,7 @@
                             <table class="table">
                                 <tr>
                                     <th>المقاس</th>
-                                    <td>{{ $product['size'] }}</td>
+                                    <td>{{ $product->size }}</td>
                                 </tr>
 
                             </table>
@@ -226,7 +226,7 @@
                             <table class="table">
                                 <tr>
                                     <th>الوزن المناسب</th>
-                                    <td>{{ $product['weight'] }}</td>
+                                    <td>{{ $product->weight }}</td>
                                 </tr>
 
                             </table>

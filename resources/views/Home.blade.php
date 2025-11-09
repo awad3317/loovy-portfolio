@@ -7,5 +7,5 @@
 @endsection
 
 @section('content')
-@livewire('home',['type' => ['calmy_baby','lofy_baby']])
+@livewire('home')
 @endsection

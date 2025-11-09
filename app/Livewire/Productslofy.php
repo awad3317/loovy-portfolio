@@ -3,36 +3,37 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Brand;
 
 class Productslofy extends Component
 {
- public $title, $description, $features, $sizes, $products, $allProducts;
+    public $lofy;
+    public $features;
+    public $products;
+    public $sizes;
+    public $allProducts;
     public $selectedSize = null;
 
-    public function mount($type)
+    public function mount($lofy)
     {
-        $data = config('products.' . $type);
+        // تحميل العلاقات المطلوبة
+        $this->lofy = Brand::with('features', 'products')
+            ->where('id', $lofy->id)
+            ->firstOrFail();
 
-        if (!$data) {
-            abort(404, 'المنتج غير موجود');
-        }
-
-        $this->title = $data['title'];
-        $this->description = $data['description'];
-        $this->features = $data['features'];
-        $this->sizes = $data['sizes'];
-        $this->allProducts = $data['products'];
+        $this->features = $this->lofy->features;
+        $this->allProducts = $this->lofy->products;
         $this->products = $this->allProducts;
+
+        // استخراج المقاسات بدون تكرار
+        $this->sizes = $this->lofy->products->pluck('size')->unique()->values();
     }
 
-   public function filterBySize($size)
-{
-    $this->selectedSize = $size;
-
-    $this->products = array_filter($this->allProducts, function ($product) use ($size) {
-        return isset($product['size']) && $product['size'] === $size;
-    });
-}
+    public function filterBySize($size)
+    {
+        $this->selectedSize = $size;
+        $this->products = $this->allProducts->where('size', $size);
+    }
 
     public function resetFilter()
     {
@@ -40,16 +41,14 @@ class Productslofy extends Component
         $this->products = $this->allProducts;
     }
 
-
     public function render()
     {
-        $data = [
-            'title' => $this->title,
-            'description' => $this->description,
+        return view('livewire.productslofy', [
+            'lofy' => $this->lofy,
             'features' => $this->features,
             'sizes' => $this->sizes,
             'products' => $this->products,
-        ];
-        return view('livewire.productslofy', compact('data'));
+            'selectedSize' => $this->selectedSize,
+        ]);
     }
 }

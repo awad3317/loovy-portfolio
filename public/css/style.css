@@ -64,6 +64,7 @@ body {
 }
 
 
+/* القائمة المنسدلة لسطح المكتب */
 .custom-dropdown {
     position: relative;
     display: inline-block;
@@ -81,7 +82,7 @@ body {
     padding: 0.5rem 0;
     min-width: 180px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    z-index: 1000;
+    z-index: 99999 !important;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -105,21 +106,21 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* تأثيرات الـ hover الأصلية تبقى كما هي */
+/* تأثير hover */
 .navbar-nav.d-flex.flex-row.gap-5 .nav-link:hover {
     color: #f8f9fa !important;
     transform: translateY(-3px);
 }
 
-/* ستايلات القائمة المنسدلة للجوال */
+/* القائمة المنسدلة للجوال */
 .mobile-dropdown {
     position: relative;
 }
 
 .mobile-dropdown-menu {
     display: none;
-    position: fixed;
-    bottom: 70px;
+    position: absolute;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(43, 59, 107, 0.95);
@@ -130,7 +131,7 @@ body {
     width: max-content;
     max-width: 90vw;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    z-index: 1050;
+    z-index: 99999 !important;
 }
 
 .mobile-dropdown-item {
@@ -146,12 +147,13 @@ body {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* تأثيرات اللمس للجوال */
+/* عند تفعيل القائمة في الجوال */
 .mobile-dropdown.active .mobile-dropdown-menu {
     display: block;
     animation: fadeInUp 0.3s ease;
 }
 
+/* إزالة النقاط من القوائم */
 .custom-dropdown-menu,
 .mobile-dropdown-menu {
     list-style-type: none !important;
@@ -159,11 +161,38 @@ body {
     margin-left: 0 !important;
 }
 
-/* للتأكد من إزالة النقاط في جميع المتصفحات */
 .custom-dropdown-menu li,
 .mobile-dropdown-menu li {
     list-style: none !important;
 }
+
+/* حركة الظهور */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* تأكيد أن navbar فوق الكل */
+.navbar {
+    position: relative;
+    z-index: 99998 !important;
+}
+
+/* إزالة أي تداخل أو قصّ من العناصر الأخرى */
+section,
+header,
+main {
+    position: relative;
+    z-index: 1;
+    overflow: visible !important;
+}
+
 
 /* تأكيد أن النص أبيض وعريض عند التنشيط */
 .nav-link.active-nav-item {

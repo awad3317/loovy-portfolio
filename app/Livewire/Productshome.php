@@ -3,32 +3,25 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Product;
+
+
 
 class Productshome extends Component
 {
-    public $title = "منتجاتنا";
+   public $title = "منتجاتنا";
     public $sizes = [];
     public $products = [];
     public $allProducts = [];
     public $selectedType = null;
     public $selectedSizes = [];
 
-    public function mount($types = [])
+    public function mount()
     {
-        $this->allProducts = [];
-        $this->sizes = [];
-
-        foreach ($types as $type) {
-            $data = config('products.' . $type);
-
-            if (!$data) continue;
-
-            $this->allProducts = array_merge($this->allProducts, $data['products'] ?? []);
-            $this->sizes = array_unique(array_merge($this->sizes, $data['sizes'] ?? []));
-        }
-
-        shuffle($this->allProducts);
+        $this->allProducts = Product::with('brand')->get();
         $this->products = $this->allProducts;
+
+        $this->sizes = $this->allProducts->pluck('size')->unique()->values()->toArray();
     }
 
     public function filterByType($type)
@@ -44,7 +37,6 @@ class Productshome extends Component
         } else {
             $this->selectedSizes[] = $size;
         }
-
         $this->applyFilters();
     }
 
@@ -53,23 +45,30 @@ class Productshome extends Component
         $this->selectedType = null;
         $this->selectedSizes = [];
         $this->products = $this->allProducts;
-        shuffle($this->products);
     }
 
-    private function applyFilters()
-    {
-        $this->products = array_filter($this->allProducts, function ($p) {
-            $matchType = !$this->selectedType || ($p['type'] ?? null) === $this->selectedType;
-            $matchSize = empty($this->selectedSizes) || in_array($p['size'] ?? null, $this->selectedSizes);
-            return $matchType && $matchSize;
-        });
+    private function applyFilters(): void
+{
+    $filtered = $this->allProducts;
 
-        $this->products = array_values($this->products);
-        shuffle($this->products);
+    if ($this->selectedType) {
+        $filtered = $filtered->where('type', $this->selectedType);
     }
+
+    if (!empty($this->selectedSizes)) {
+        $filtered = $filtered->whereIn('size', $this->selectedSizes);
+    }
+
+    $this->products = $filtered->values();
+}
 
     public function render()
     {
-        return view('livewire.productshome');
+        return view('livewire.productshome', [
+            'products' => $this->products,
+            'sizes' => $this->sizes,
+            'selectedType' => $this->selectedType,
+            'selectedSizes' => $this->selectedSizes,
+        ]);
     }
 }

@@ -37,63 +37,48 @@
             </div>
             <div class="row align-items-start gy-4">
                
-                <div class="col-lg-6">
-                    <ul class="nav nav-tabs mb-3" id="countryTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active text-dark" id="yemen-tab" data-bs-toggle="tab"
-                                data-bs-target="#yemen" type="button" role="tab">اليمن</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="saudi-tab" data-bs-toggle="tab" data-bs-target="#saudi"
-                                type="button" role="tab">السعودية</button>
-                        </li>
-                    </ul>
+                <div class="container">
+    <h3 class="fw-bold text-center mb-4">فروعنا</h3>
 
-                    <div class="tab-content" id="countryTabContent"
-                        style="max-height: 550px; overflow-y: auto; direction: ltr;">
-                        {{-- تبويب اليمن --}}
-                        <div class="tab-pane fade show active" id="yemen" role="tabpanel">
-                            <div class="d-flex flex-column gap-3">
-                                @foreach ($branches['yemen'] as $branch)
-                                    <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-semibold mb-3">{{ $branch['name'] }}</h5>
-                                            <div class="d-flex align-items-center mb-2 text-muted">
-                                                <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                                <span>{{ $branch['address'] }}</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-muted">
-                                                <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                                <span>{{ $branch['phone'] }}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
+  <ul class="nav nav-tabs mb-3" id="branchTabs" role="tablist">
+    @foreach ($branches as $country => $countryBranches)
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {{ $loop->first ? 'active' : '' }}" 
+                    id="{{ Str::slug($country) }}-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#{{ Str::slug($country) }}"
+                    type="button" role="tab">
+                {{ $country }}
+            </button>
+        </li>
+    @endforeach
+</ul>
 
-                        {{-- تبويب السعودية --}}
-                        <div class="tab-pane fade" id="saudi" role="tabpanel">
-                            <div class="d-flex flex-column gap-3">
-                                @foreach ($branches['saudi'] as $branch)
-                                    <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-semibold mb-3">{{ $branch['name'] }}</h5>
-                                            <div class="d-flex align-items-center mb-2 text-muted">
-                                                <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                                <span>{{ $branch['address'] }}</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-muted">
-                                                <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                                <span>{{ $branch['phone'] }}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
+<div class="tab-content" id="branchTabsContent">
+    @foreach ($branches as $country => $countryBranches)
+        <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" 
+             id="{{ Str::slug($country) }}" role="tabpanel">
+            <div class="row g-3">
+                @foreach ($countryBranches as $branch)
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm border-0 rounded-4 p-3">
+                            <h5 class="fw-bold">{{ $branch->name }}</h5>
+                            <p class="text-muted mb-1">
+                                <i class="fa-solid fa-location-dot me-2"></i>{{ $branch->address }}
+                            </p>
+                            <p class="mb-0">
+                                <i class="fa-solid fa-phone me-2"></i>{{ $branch->phone }}
+                            </p>
                         </div>
                     </div>
-                </div>
+                @endforeach
+            </div>
+        </div>
+    @endforeach
+</div>
+
+</div>
+
                 <div class="col-lg-6 text-center">
                     <div class="rounded-4 shadow-sm overflow-hidden" style="height: 550px;">
                         <iframe

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $data['title'])
+@section('title', $lofy->name)
 
 @section('navbar')
     @extends('partials.navbar')
@@ -8,6 +8,6 @@
 
 @section('content')
 
-@livewire('productslofy', ['type' => 'lofy_baby'])
+@livewire('productslofy', ['lofy' => $lofy])
 
 @endsection

@@ -3,10 +3,11 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Product;
 
 class Productspecific extends Component
 {
-     public $type;
+    public $type;
     public $id;
     public $product;
     public $similarProducts;
@@ -16,19 +17,23 @@ class Productspecific extends Component
         $this->type = $type;
         $this->id = $id;
 
-        $products = config('products.' . $type . '.products', []);
-        $this->product = collect($products)->firstWhere('id', $id);
+        $this->product = Product::with('brand')
+            ->where('type', $type)
+            ->where('id', $id)
+            ->firstOrFail();
 
-        $this->similarProducts = collect($products)->filter(function($p) use ($id) {
-            return $p['id'] != $id;
-        })->take(4)
-        ->values();
+        $this->similarProducts = Product::with('brand')
+            ->where('brand_id', $this->product->brand_id)
+            ->where('id', '!=', $id)
+            ->take(4)
+            ->get();
     }
 
     public function render()
     {
         return view('livewire.productspecific', [
-            'similarProducts' => $this->similarProducts
+            'product' => $this->product,
+            'similarProducts' => $this->similarProducts,
         ]);
     }
 }

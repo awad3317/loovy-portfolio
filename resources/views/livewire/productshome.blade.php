@@ -96,16 +96,16 @@
     <div class="row g-4 justify-content-center">
         @forelse($products as $product)
             <div class="col-sm-6 col-md-4 col-lg-3">
-      <a href="{{ route('products.show', ['type' => $product['type'], 'id' => $product['id']]) }}"
+      <a href="{{ route('products.show', ['type' => $product->type, 'id' => $product->id]) }}"
                             class="text-decoration-none text-dark">
                 <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-                    <img src="{{ asset($product['image']) }}"
+                    <img src="{{ asset($product->image) }}"
                         class="card-img-top mx-auto rounded-top img-fluid"
-                        alt="{{ $product['name'] }}"
+                        alt="{{ $product->name }}"
                         style="object-fit: contain; max-height: 200px; width: auto;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold mb-2">{{ $product['name'] }}</h5>
-                        <p class="card-text text-muted small">{{ $product['description'] }}</p>
+                        <h5 class="card-title fw-bold mb-2">{{ $product->name }}</h5>
+                        <p class="card-text text-muted small">{{ $product->description }}</p>
                     </div>
                 </div>
             </a>
