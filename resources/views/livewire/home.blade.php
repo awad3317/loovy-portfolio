@@ -287,76 +287,79 @@
                     تواجدنا في 15 فرع رئيسي لخدمتكم
                 </h6>
             </div>
-            <div class="row align-items-start gy-4">
-                <div class="col-lg-6">
-                    <ul class="nav nav-tabs mb-3" id="countryTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active text-dark" id="yemen-tab" data-bs-toggle="tab"
-                                data-bs-target="#yemen" type="button" role="tab">اليمن</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="saudi-tab" data-bs-toggle="tab" data-bs-target="#saudi"
-                                type="button" role="tab">السعودية</button>
-                        </li>
-                    </ul>
+         <div class="row align-items-start gy-4">
 
-                    <div class="tab-content" id="countryTabContent"
-                        style="max-height: 550px; overflow-y: auto; direction: ltr;">
-                        {{-- تبويب اليمن --}}
-                        <div class="tab-pane fade show active" id="yemen" role="tabpanel">
-                            <div class="d-flex flex-column gap-3">
-                                @foreach ($branches['yemen'] as $branch)
-                                    <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-semibold mb-3">{{ $branch['name'] }}</h5>
-                                            <div class="d-flex align-items-center mb-2 text-muted">
-                                                <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                                <span>{{ $branch['address'] }}</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-muted">
-                                                <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                                <span>{{ $branch['phone'] }}</span>
-                                            </div>
-                                        </div>
+    {{-- قسم الفروع --}}
+    <div class="col-lg-6">
+
+        {{-- Tabs الخاصة بالدول --}}
+        <ul class="nav nav-tabs mb-3" id="countryTab" role="tablist">
+            @foreach ($branchesByCountry as $country => $countryBranches)
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link {{ $loop->first ? 'active' : '' }}"
+                        id="{{ $country }}-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#{{ $country }}"
+                        type="button" role="tab">
+                        {{ $country }}
+                    </button>
+                </li>
+            @endforeach
+        </ul>
+
+        {{-- محتوى Tabs --}}
+        <div class="tab-content" id="countryTabContent"
+            style="max-height: 550px; overflow-y: auto; direction: ltr;">
+
+            @foreach ($branchesByCountry as $country => $countryBranches)
+                <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}"
+                    id="{{ $country }}" role="tabpanel">
+
+                    <div class="d-flex flex-column gap-3">
+
+                        @foreach ($countryBranches as $branch)
+                            <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
+                                <div class="card-body">
+
+                                    <h5 class="card-title fw-semibold mb-3">{{ $branch->name }}</h5>
+
+                                    <div class="d-flex align-items-center mb-2 text-muted">
+                                        <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
+                                        <span>{{ $branch->address }}</span>
                                     </div>
-                                @endforeach
-                            </div>
-                        </div>
 
-                        {{-- تبويب السعودية --}}
-                        <div class="tab-pane fade" id="saudi" role="tabpanel">
-                            <div class="d-flex flex-column gap-3">
-                                @foreach ($branches['saudi'] as $branch)
-                                    <div class="card shadow-sm rounded-4 border-0" style="direction: rtl;">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-semibold mb-3">{{ $branch['name'] }}</h5>
-                                            <div class="d-flex align-items-center mb-2 text-muted">
-                                                <i class="fa-solid fa-location-dot text-dark me-3 fs-5"></i>
-                                                <span>{{ $branch['address'] }}</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-muted">
-                                                <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
-                                                <span>{{ $branch['phone'] }}</span>
-                                            </div>
-                                        </div>
+                                    <div class="d-flex align-items-center text-muted">
+                                        <i class="fa-solid fa-phone text-dark me-3 fs-5"></i>
+                                        <span>{{ $branch->phone }}</span>
                                     </div>
-                                @endforeach
+
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        @endforeach
 
-
-                <div class="col-lg-6 text-center">
-                    <div class="rounded-4 shadow-sm overflow-hidden" style="height: 550px;">
-                        <iframe
-                            src="https://www.google.com/maps/d/embed?mid=1Lv0VGdKiJRY2ucl41RbrYrGBYyfZvDw&ehbc=2E312F&ll=18.0,45.0&z=6"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="موقع مصنع لوفي بيبي - سيئون، اليمن">
-                        </iframe>
                     </div>
+
                 </div>
-            </div>
+            @endforeach
+
+        </div>
+
+    </div>
+
+    {{-- قسم الخريطة --}}
+    <div class="col-lg-6 text-center">
+        <div class="rounded-4 shadow-sm overflow-hidden" style="height: 550px;">
+            <iframe
+                src="https://www.google.com/maps/d/embed?mid=1Lv0VGdKiJRY2ucl41RbrYrGBYyfZvDw&ehbc=2E312F&ll=18.0,45.0&z=6"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="موقع المصنع">
+            </iframe>
+        </div>
+    </div>
+
+</div>
+
         </div>
     </section>
 
