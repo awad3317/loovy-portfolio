@@ -41,7 +41,7 @@
     <h3 class="fw-bold text-center mb-4">فروعنا</h3>
 
   <ul class="nav nav-tabs mb-3" id="branchTabs" role="tablist">
-    @foreach ($branches as $country => $countryBranches)
+    @foreach ($Branchs as $country => $countryBranches)
         <li class="nav-item" role="presentation">
             <button class="nav-link {{ $loop->first ? 'active' : '' }}" 
                     id="{{ Str::slug($country) }}-tab"
@@ -55,7 +55,7 @@
 </ul>
 
 <div class="tab-content" id="branchTabsContent">
-    @foreach ($branches as $country => $countryBranches)
+    @foreach ($Branchs as $country => $countryBranches)
         <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" 
              id="{{ Str::slug($country) }}" role="tabpanel">
             <div class="row g-3">

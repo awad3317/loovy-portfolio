@@ -56,7 +56,7 @@ class HomeController extends Controller
             $Branchs['saudi'] = $allBranchs['saudi'];
         }
 
-        return view('Branchs', compact('Branchs')); 
+        return view('branches', compact('Branchs')); 
     }
     
 }

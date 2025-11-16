@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') | شركة المصنع الأول للصناعات الصحية المحدودة</title>
+    <meta name="google-site-verification" content="b4b-59HgnNG6_P1THpfuSV2GYmnIKbQpfqv9cwB5nm0" />
     
     <!-- CSS الحرجة -->
     <style>
