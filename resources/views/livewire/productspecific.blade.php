@@ -239,7 +239,7 @@
         <div class="cta-section p-5 text-center text-white mb-5">
             <h2 class="mb-3">جرب حفاضات لوفي بيبي الآن!</h2>
             <p class="lead mb-4">انضم إلى آلاف الأمهات الراضيات عن منتجاتنا</p>
-            <a href="https://wa.me/967770662355?text=السلام عليكم، أريد طلب منتج" target="_blank"
+            <a href="https://wa.me/967781332188?text=السلام عليكم، أريد طلب منتج" target="_blank"
                 class="btn btn-success btn-lg px-5">
                 اطلب الآن
             </a>

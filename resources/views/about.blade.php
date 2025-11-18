@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'الرئيسية')
+@section('title', 'من نحن')
 
 @section('navbar')
      @extends('partials.navbar')
@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="about-image shadow-lg rounded overflow-hidden">
-                        <img src="{{ asset('images/lofy2.jpg') }}" alt="صورة منتجات لوفي بيبي" class="img-fluid w-100"
+                        <img src="{{ asset('images/factory.jpg') }}" alt="صورة منتجات لوفي بيبي" class="img-fluid w-100"
                             style="max-height: 500px; object-fit: cover;">
                     </div>
                 </div>

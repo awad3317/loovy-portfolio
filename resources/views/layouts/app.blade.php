@@ -10,7 +10,7 @@
     <meta name="google-site-verification" content="b4b-59HgnNG6_P1THpfuSV2GYmnIKbQpfqv9cwB5nm0">
 
     <meta name="description"
-        content="المصنع الأول لصناعة حفاضات لوفي بيبي وكالمي. نقدم منتجات عالية الجودة بمعايير عالمية لضمان الراحة والحماية للأطفال باستخدام أحدث تقنيات تصنيع الحفاضات.">
+        content="شركة المصنع الأول لصناعات الصحية المحدودة. نقدم منتجات عالية الجودة بمعايير عالمية لضمان الراحة والحماية للأطفال باستخدام أحدث تقنيات تصنيع الحفاضات.">
 
     <meta name="keywords"
         content="حفاضات لوفي بيبي، حفاضات كالمي، مصنع حفاضات، صناعة الحفاضات، حفاضات أطفال، مصنع لوفي بيبي، منتجات أطفال، حفاضات بجودة عالية">
@@ -19,15 +19,15 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="المصنع الأول لصناعة حفاضات لوفي بيبي وكالمي">
+    <meta property="og:title" content="شركة المصنع الأول لصناعات الصحية المحدودة">
     <meta property="og:description"
-        content="نقدم حفاضات لوفي بيبي وكالمي بجودة عالية ومعايير عالمية، مع أحدث تقنيات صناعة الحفاضات لضمان الراحة والحماية للأطفال.">
+        content="خبراء تصنيع حفاضات الآطفال - جودة موثوقة , خطوط أنتاج متقدمة , وشهادات عالمية.">
     <meta property="og:image" content="{{ asset('favicons/favicon-96x96.png') }}">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="المصنع الأول لصناعة حفاضات لوفي بيبي وكالمي">
+    <meta name="twitter:title" content="شركة المصنع الأول لصناعات الصحية المحدودة">
     <meta name="twitter:description"
-        content="حفاضات لوفي بيبي وكالمي بمعايير عالمية وتقنيات تصنيع حديثة لضمان الراحة والحماية للأطفال.">
+        content="خبراء تصنيع حفاضات الآطفال - جودة موثوقة , خطوط أنتاج متقدمة , وشهادات عالمية.">
 
     <!-- ========================= ICONS ========================= -->
 
@@ -118,7 +118,7 @@
         @yield('content')
     </main>
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/967770662355?text=مرحباً%20أود%20الاستفسار%20عن%20منتجاتكم" class="whatsapp-float"
+    <a href="https://wa.me/967781332188?text=مرحباً%20أود%20الاستفسار%20عن%20منتجاتكم" class="whatsapp-float"
         target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>

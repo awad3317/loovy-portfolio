@@ -1,28 +1,28 @@
 @extends('layouts.app')
 
-@section('title', 'الرئيسية')
+@section('title', 'فروعنا | لووڤي')
 
 @section('navbar')
     @extends('partials.navbar')
 @endsection
 
 @section('content')
- <style>
+    <style>
         .nav-tabs .nav-link.active {
             background-color: #253E69 !important;
             color: white !important;
             border-color: #253E69 #fff !important;
         }
+
         .nav-tabs .nav-link.active:hover {
             color: white !important;
             background-color: #1a2d4d !important;
         }
-         .nav-tabs .nav-link:hover {
+
+        .nav-tabs .nav-link:hover {
             color: #253E69 !important;
             background-color: #f8f9fa !important;
         }
-
-        
     </style>
     <section class="py-5">
         <div class="container">
@@ -32,62 +32,86 @@
                     فروعنا
                 </h3>
                 <h6 class="text-muted mt-3">
-                    تواجدنا في 15 فرع رئيسي لخدمتكم
+                    لدينا شبكة واسعة من الفروع لخدمة عملائنا أينما كانوا 
                 </h6>
             </div>
             <div class="row align-items-start gy-4">
-               
-                <div class="container">
-    <h3 class="fw-bold text-center mb-4">فروعنا</h3>
 
-  <ul class="nav nav-tabs mb-3" id="branchTabs" role="tablist">
-    @foreach ($Branchs as $country => $countryBranches)
-        <li class="nav-item" role="presentation">
-            <button class="nav-link {{ $loop->first ? 'active' : '' }}" 
-                    id="{{ Str::slug($country) }}-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#{{ Str::slug($country) }}"
-                    type="button" role="tab">
-                {{ $country }}
-            </button>
-        </li>
-    @endforeach
-</ul>
+                <!-- قسم الفروع -->
+                <div class="col-lg-6">
 
-<div class="tab-content" id="branchTabsContent">
-    @foreach ($Branchs as $country => $countryBranches)
-        <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" 
-             id="{{ Str::slug($country) }}" role="tabpanel">
-            <div class="row g-3">
-                @foreach ($countryBranches as $branch)
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card shadow-sm border-0 rounded-4 p-3">
-                            <h5 class="fw-bold">{{ $branch->name }}</h5>
-                            <p class="text-muted mb-1">
-                                <i class="fa-solid fa-location-dot me-2"></i>{{ $branch->address }}
-                            </p>
-                            <p class="mb-0">
-                                <i class="fa-solid fa-phone me-2"></i>{{ $branch->phone }}
-                            </p>
-                        </div>
+                    <!-- Tabs الخاصة بالدول -->
+                    <ul class="nav nav-tabs mb-3 flex-wrap" id="countryTab" role="tablist">
+                        @foreach ($branchesByCountry as $country => $countryBranches)
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link {{ $loop->first ? 'active' : '' }}" id="{{ $country }}-tab"
+                                    data-bs-toggle="tab" data-bs-target="#{{ $country }}" type="button"
+                                    role="tab">
+                                    {{ $country }}
+                                </button>
+                            </li>
+                        @endforeach
+                    </ul>
+
+                    <!-- محتوى Tabs -->
+                    <div class="tab-content branches-tab-content" id="countryTabContent">
+
+                        @foreach ($branchesByCountry as $country => $countryBranches)
+                            <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" id="{{ $country }}"
+                                role="tabpanel">
+
+                                <!-- صندوق ثابت فيه Scroll -->
+                                <div
+                                    style="
+                    max-height: 550px; 
+                    overflow-y: auto;
+                    padding-right: 5px;
+                    direction: rtl;
+                ">
+
+                                    <div class="d-flex flex-column gap-3">
+
+                                        @foreach ($countryBranches as $branch)
+                                            <div class="card shadow-sm rounded-4 border-0">
+                                                <div class="card-body">
+
+                                                    <h5 class="card-title fw-semibold mb-3">
+                                                        {{ $branch->name }}
+                                                    </h5>
+
+                                                    <div class="d-flex align-items-center mb-2 text-muted">
+                                                        <i class="fa-solid fa-location-dot text-dark ms-3 fs-5"></i>
+                                                        <span>{{ $branch->address }}</span>
+                                                    </div>
+
+                                                    <div class="d-flex align-items-center text-muted">
+                                                        <i class="fa-solid fa-phone text-dark ms-3 fs-5"></i>
+                                                        <span>{{ $branch->phone }}</span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        @endforeach
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        @endforeach
+
                     </div>
-                @endforeach
-            </div>
-        </div>
-    @endforeach
-</div>
 
-</div>
+                </div>
 
+
+                <!-- قسم الخريطة -->
                 <div class="col-lg-6 text-center">
-                    <div class="rounded-4 shadow-sm overflow-hidden" style="height: 550px;">
-                        <iframe
-                            src="https://www.google.com/maps/d/embed?mid=1Lv0VGdKiJRY2ucl41RbrYrGBYyfZvDw&ehbc=2E312F&ll=18.0,45.0&z=6"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="موقع مصنع لوفي بيبي - سيئون، اليمن">
-                        </iframe>
+                    <div class="rounded-4 shadow-sm overflow-hidden branches-map-wrapper">
+                        <div id="map" style="height: 40rem; width: 100%;"></div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

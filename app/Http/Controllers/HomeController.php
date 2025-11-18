@@ -12,16 +12,16 @@ class HomeController extends Controller
     public function calmyBaby()
     {
         $calmy = Brand::with('products')
-        ->where('slug', 'calmy_baby')
-        ->firstOrFail();
+            ->where('slug', 'calmy_baby')
+            ->firstOrFail();
         return view('calmyBaby', compact('calmy'));
     }
 
     public function lofyBaby()
     {
-         $lofy = Brand::with('products', 'features')
-        ->where('slug', 'lofy_baby')
-        ->firstOrFail();
+        $lofy = Brand::with('products', 'features')
+            ->where('slug', 'lofy_baby')
+            ->firstOrFail();
         return view('lofyBaby', compact('lofy'));
     }
     public function ALL_product()
@@ -29,7 +29,7 @@ class HomeController extends Controller
         return view('all_product',);
     }
 
-      public function showProduct($type, $id)
+    public function showProduct($type, $id)
     {
         $product = Product::with('brand')
             ->where('type', $type)
@@ -44,19 +44,11 @@ class HomeController extends Controller
         return view('product_specifc', compact('product', 'similarProducts', 'type', 'id'));
     }
 
-    public function ShowBranch()
+    public function showBranch()
     {
-        $allBranchs = Branch::all();
-
-        $Branchs = [];
-        if (isset($allBranchs['yemen'])) {
-            $Branchs['yemen'] = $allBranchs['yemen'];
-        }
-        if (isset($allBranchs['saudi'])) {
-            $Branchs['saudi'] = $allBranchs['saudi'];
-        }
-
-        return view('branches', compact('Branchs')); 
+        $branchesByCountry = Branch::with('country')
+            ->get()
+            ->groupBy('country.name');
+        return view('branches', compact('branchesByCountry'));
     }
-    
 }

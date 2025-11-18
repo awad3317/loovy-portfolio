@@ -59,20 +59,7 @@ class DatabaseSeeder extends Seeder
                 'weight' => '2-4 كغ',
                 'type' => 'calmy_baby',
             ],
-            [
-                'name' => 'حفاضات حجم كبير',
-                'image' => 'images/calmy_p2.jpg',
-                'images' => [
-                    'images/calmy_p1.jpg',
-                    'images/calmy_p2.jpg',
-                    'images/calmy_p3.jpg',
-                    'images/calmy_p4.jpg'
-                ],
-                'description' => 'تصميم عملي للأطفال الأكثر نشاطًا، يوفر ثباتًا مثاليًا وراحة مستمرة حتى مع الحركة الكثيرة.',
-                'size' => 'مقاس 4 (كبير)',
-                'weight' => '7-10 كغ',
-                'type' => 'calmy_baby',
-            ],
+
             [
                 'name' => 'حفاضات حجم صغير',
                 'image' => 'images/calmy_p3.jpg',
@@ -99,6 +86,20 @@ class DatabaseSeeder extends Seeder
                 'description' => 'حفاضات عالية الجودة تمنح طفلك حرية الحركة مع امتصاص موثوق يمنع التسرب ويوفر راحة طوال اليوم.',
                 'size' => 'مقاس 3 (وسط)',
                 'weight' => '5-8 كغ',
+                'type' => 'calmy_baby',
+            ],
+            [
+                'name' => 'حفاضات حجم كبير',
+                'image' => 'images/calmy_p2.jpg',
+                'images' => [
+                    'images/calmy_p1.jpg',
+                    'images/calmy_p2.jpg',
+                    'images/calmy_p3.jpg',
+                    'images/calmy_p4.jpg'
+                ],
+                'description' => 'تصميم عملي للأطفال الأكثر نشاطًا، يوفر ثباتًا مثاليًا وراحة مستمرة حتى مع الحركة الكثيرة.',
+                'size' => 'مقاس 4 (كبير)',
+                'weight' => '7-10 كغ',
                 'type' => 'calmy_baby',
             ],
             [
