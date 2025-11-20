@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\{Brand, Feature, Product, Branch};
+use App\Models\{Brand, Feature, Product, Branch, Country};
 
 class DatabaseSeeder extends Seeder
 {
@@ -259,31 +259,40 @@ class DatabaseSeeder extends Seeder
             ],
         ];
 
+        
+        
         foreach ($lofyp as $product) {
             $product['brand_id'] = $lofy->id;
             Product::create($product);
         }
-        // $Branchs = [
-        //     [
-        //         'country_id' => 1,
-        //         'name' => 'مقر الرئيسي',
-        //         'address' => 'الشارع الرئيسي، المدينة الرئيسية',
-        //         'phone' => '0555123456',
-        //     ],
-        //     [
-        //         'country_id' => 2,
-        //         'name' => 'مقر الفرع',
-        //         'address' => 'الشارع الفرع، المدينة الفرعية',
-        //         'phone' => '0555654321',
-        //     ],[
-        //         'country_id' => 1,
-        //         'name' => 'فرع عدن - المنصورة',
-        //         'address' => 'الشارع الرئيسي - المنصورة - بجانب دوار كالتكس',
-        //         'phone' => '+967 733 333 333',
-        //     ]
-        // ];
-        // foreach ($Branchs as $branch) {
-        //     Branch::create($branch);
-        // }
+        $countries = [
+            ['name' => 'السعودية'],
+            ['name' => 'اليمن'],
+        ];
+        foreach ($countries as $country) {
+            Country::create($country);
+        }
+        $Branchs = [
+            [
+                'country_id' => 1,
+                'name' => 'مقر الرئيسي',
+                'address' => 'الشارع الرئيسي، المدينة الرئيسية',
+                'phone' => '0555123456',
+            ],
+            [
+                'country_id' => 1,
+                'name' => 'مقر الفرع',
+                'address' => 'الشارع الفرع، المدينة الفرعية',
+                'phone' => '0555654321',
+            ],[
+                'country_id' => 2,
+                'name' => 'فرع عدن - المنصورة',
+                'address' => 'الشارع الرئيسي - المنصورة - بجانب دوار كالتكس',
+                'phone' => '+967 733 333 333',
+            ]
+        ];
+        foreach ($Branchs as $branch) {
+            Branch::create($branch);
+        }
     }
 }

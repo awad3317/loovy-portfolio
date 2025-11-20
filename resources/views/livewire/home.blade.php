@@ -70,7 +70,17 @@
 
         }
     </style>
-        <nav class="navbar navbar-expand-lg"  >
+    
+    <section
+        style="
+        background-image: url('{{ asset('images/Rectangle.png') }}'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        min-height: 80vh;
+        position: relative;
+    ">
+    <nav class="navbar navbar-expand-lg"  >
             <div class="container-fluid d-flex align-items-center">
 
                 {{-- الشعار --}}
@@ -193,16 +203,6 @@
 
             </div>
         </nav>
-
-    <section
-        style="
-        background-image: url('{{ asset('images/Rectangle.png') }}'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 80vh;
-        position: relative;
-    ">
 
      
         <div class="container  pt-4">
@@ -571,12 +571,12 @@
                                                     </h5>
 
                                                     <div class="d-flex align-items-center mb-2 text-muted">
-                                                        <i class="fa-solid fa-location-dot text-dark ms-3 fs-5"></i>
+                                                        <i class="fa-solid fa-location-dot text-dark ms-3 fs-5 me-2 "></i>
                                                         <span>{{ $branch->address }}</span>
                                                     </div>
 
                                                     <div class="d-flex align-items-center text-muted">
-                                                        <i class="fa-solid fa-phone text-dark ms-3 fs-5"></i>
+                                                        <i class="fa-solid fa-phone text-dark ms-3 fs-5 me-2"></i>
                                                         <span>{{ $branch->phone }}</span>
                                                     </div>
 

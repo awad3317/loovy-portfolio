@@ -80,12 +80,12 @@
                                                     </h5>
 
                                                     <div class="d-flex align-items-center mb-2 text-muted">
-                                                        <i class="fa-solid fa-location-dot text-dark ms-3 fs-5"></i>
+                                                        <i class="fa-solid fa-location-dot text-dark ms-3 fs-5 me-2"></i>
                                                         <span>{{ $branch->address }}</span>
                                                     </div>
 
                                                     <div class="d-flex align-items-center text-muted">
-                                                        <i class="fa-solid fa-phone text-dark ms-3 fs-5"></i>
+                                                        <i class="fa-solid fa-phone text-dark ms-3 fs-5 me-2"></i>
                                                         <span>{{ $branch->phone }}</span>
                                                     </div>
 
@@ -115,4 +115,26 @@
             </div>
         </div>
     </section>
+       <script>
+        function initMap() {
+            const factoryLocation = {
+                lat: 15.9957476,
+                lng: 48.8246514
+            };
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: factoryLocation,
+            });
+
+            new google.maps.Marker({
+                position: factoryLocation,
+                map: map,
+                title: "موقع المصنع – صليلة، سيئون",
+            });
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD78D34sNioiFvU7GptQOzOf-wMEsHvGnc&callback=initMap" async
+        defer></script>
 @endsection
