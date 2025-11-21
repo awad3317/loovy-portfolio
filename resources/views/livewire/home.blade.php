@@ -70,17 +70,7 @@
 
         }
     </style>
-    
-    <section
-        style="
-        background-image: url('{{ asset('images/Rectangle.png') }}'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 80vh;
-        position: relative;
-    ">
-    <nav class="navbar navbar-expand-lg"  >
+       <nav class="navbar navbar-expand-lg" style="background-color: #d3d8e1;" >
             <div class="container-fluid d-flex align-items-center">
 
                 {{-- الشعار --}}
@@ -203,6 +193,16 @@
 
             </div>
         </nav>
+    <section
+        style="
+        background-image: url('{{ asset('images/Rectangle.png') }}'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        min-height: 80vh;
+        position: relative;
+    ">
+ 
 
      
         <div class="container  pt-4">
