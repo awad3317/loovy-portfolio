@@ -53,7 +53,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
 
 
-    <!-- CSS الحرجة -->
+    {{-- <!-- CSS الحرجة -->
     <style>
         body {
             visibility: hidden;
@@ -73,21 +73,23 @@
             justify-content: center;
             align-items: center;
         }
-    </style>
+    </style> --}}
+<!-- Preload أساسي -->
+<link rel="preload" href="{{ asset('bootstrap/css/bootstrap.rtl.min.css') }}" as="style">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+<link rel="preload" href="{{ asset('css/style.css') }}" as="style">
 
-    <link rel="preload" href="{{ asset('bootstrap/css/bootstrap.rtl.min.css') }}" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        as="style">
-    <link rel="preload" href="{{ asset('css/style.css') }}" as="style">
+<!-- CSS فِعلي -->
+<link href="{{ asset('bootstrap/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('css/footer-style.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
 
-    <link href="{{ asset('bootstrap/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/footer-style.css') }}" rel="stylesheet">
 
     <style>
         .whatsapp-float {

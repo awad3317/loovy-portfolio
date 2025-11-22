@@ -1,7 +1,4 @@
-body {
-        padding-bottom: 60px;
-    }
-    
+
     
 .fixed-bottom {
         z-index: 1030;
@@ -146,6 +143,20 @@ body {
 .mobile-dropdown-item:hover {
     background-color: rgba(255, 255, 255, 0.15);
 }
+@media (max-width: 768px) {
+
+    .mobile-dropdown-menu,
+    .custom-dropdown-menu {
+        top: auto !important;
+        bottom: 100% !important; /* فوق الزر */
+        transform: translateX(-50%) translateY(-10px) !important;
+    }
+
+    .mobile-dropdown.active .mobile-dropdown-menu {
+        animation: fadeInDown 0.3s ease;
+    }
+
+}
 
 /* عند تفعيل القائمة في الجوال */
 .mobile-dropdown.active .mobile-dropdown-menu {
@@ -232,5 +243,24 @@ main {
     to {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
+    }
+}
+@media (max-width: 768px) {
+
+    body {
+        padding-bottom: 95px;  /* مساحة للناف السفلي */
+    }
+
+    .fixed-bottom {
+        height: 75px;
+    }
+
+    section:last-child,
+    footer {
+        margin-bottom: 95px;
+    }
+
+    main {
+        margin-top: 0 !important;
     }
 }

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('images')->nullable();
             $table->text('description')->nullable();
             $table->string('size')->nullable();
+            $table->json('details')->nullable();
             $table->string('weight')->nullable();
             $table->string('type')->nullable();
             $table->timestamps();

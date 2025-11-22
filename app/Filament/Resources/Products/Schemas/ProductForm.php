@@ -8,6 +8,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\Select;
 use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\Repeater;
 
 class ProductForm
 {
@@ -63,6 +64,16 @@ class ProductForm
                     ])
                     ->columns(3),
 
+                Repeater::make('details')
+                    ->label('تفاصيل المنتج')
+                    ->schema([
+                        TextInput::make('detail')
+                            ->label('التفصيل')
+                            ->placeholder('أدخل التفصيل هنا')
+                    ])
+                    ->dehydrateStateUsing(fn($state) => collect($state)->pluck('detail')->toArray())
+                    ->addActionLabel('إضافة تفصيل جديد')
+                    ->columnSpanFull(),
 
                 // ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
                 // القسم الثالث: الصور
@@ -77,7 +88,7 @@ class ProductForm
                             ->required(),
 
                     ]),
-                 
+
                 Section::make('رفع الصور الإضافية للمنتج')
                     ->schema([
 

@@ -1,10 +1,10 @@
 <div>
     <section
-        style="background-image: url('{{ asset('images/photo2.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        style="background-image: url('{{ asset('images/bg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container pb-5">
-            <div class="text-center mb-4">
-                <h3 class="fw-bold mb-2">{{ $calmy->name }}</h3>
-                <h5 class="text-muted font-bold">{{ $calmy->description }}</h5>
+            <div class="text-center mb-4 py-3">
+                <h3 class="fw-bold mb-2 text-white">{{ $calmy->name }}</h3>
+                <h5 class="text-white font-bold">{{ $calmy->description }}</h5>
             </div>
 
             <div class="row gy-4 mx-5">
@@ -26,25 +26,33 @@
         </div>
     </section>
     <section class="py-5 my-2">
-    <div class="container py-5">
-        <div class="row align-items-center g-4">
-            <div class="col-md-6 mb-4">
-                <h3 class="fw-bold mb-4 text-dark">لماذا تختار كالمي بيبي؟</h3>
-                <ul class="features-list">
-                    <li><span class="check-icon">✔</span> تصميم T مرن</li>
-                    <li><span class="check-icon">✔</span> إمتصاص فائق</li>
-                    <li><span class="check-icon">✔</span> سطح داخلي قطني ناعم</li>
-                    <li><span class="check-icon">✔</span> حاجز تسريب مزدوج (Double lock)</li>
-                    <li><span class="check-icon">✔</span> اذان مطاطية جانبية</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <img src="{{ asset('images/CalmyBaby.png') }}" alt="صورة منتجات لوفي بيبي"
-                     class="img-fluid w-100" style="max-height: 500px; opacity: 0.8;">
+        <div class="container py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-md-6 mb-4">
+                    <h3 class="fw-bold mb-4 text-dark">عن المنتج {{ $calmy->name }}:</h3>
+                    <div class="pe-5" style="font-size: x-large">
+                        <p>
+                            كالمي بيبي منتج اقتصادي مناسب للاستخدام اليومي، يجمع بين الجودة الجيدة والسعر المناسب.
+                            تم تصميمه ليقدم حماية موثوقة وراحة مقبولة للأطفال خلال أنشطتهم اليومية مع الحفاظ على تكلفة
+                            منخفضة للأم.
+
+                            يتميز كالمي بيبي بتصميم عملي وخصائص تم تطويرها لتلبية حاجات العائلة التي تبحث عن أفضل قيمة
+                            مقابل سعر.
+                        </p>
+
+                        <p style="font-weight: bolder">
+                            كالمي بيبي هو الحل المثالي للميزانية الاقتصادية دون التنازل عن الأمان والراحة الأساسية .
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ asset('images/CalmyBaby.png') }}" alt="صورة منتجات لوفي بيبي" class="img-fluid w-100"
+                        style="max-height: 500px; opacity: 0.8;">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section class="py-5">
         <div class="container">

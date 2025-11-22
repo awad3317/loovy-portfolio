@@ -1,61 +1,71 @@
 <div>
-<section style="background-image: url('{{ asset('images/photo2.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
- <div class="container pb-5">
-    <div class="text-center mb-4">
-        <h3 class="fw-bold mb-2">{{ $lofy->name }}</h3>
-        <h5 class="text-muted font-bold">{{ $lofy->description }}</h5>
-    </div>
+    <section
+        style="background-image: url('{{ asset('images/bg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container pb-5">
+            <div class="text-center mb-4 py-3">
+                <h3 class="fw-bold mb-2 text-white">{{ $lofy->name }}</h3>
+                <h5 class="font-bold text-white">{{ $lofy->description }}</h5>
+            </div>
 
-    <div class="row gy-4 mx-5">
-        @foreach($lofy->features as $feature)
-        <div class="col-sm-12 col-md-4 col-lg-4">
-            <div class="card shadow-sm h-100 border-0 rounded-4">
-                <div class="mx-auto mt-4 d-flex justify-content-center align-items-center"
-                     style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: {{ $feature->color }}1A;">
-                    <i class="{{ $feature->icon }}" style="color: {{ $feature->color }};"></i>
+            <div class="row gy-4 mx-5">
+                @foreach ($lofy->features as $feature)
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="card shadow-sm h-100 border-0 rounded-4">
+                            <div class="mx-auto mt-4 d-flex justify-content-center align-items-center"
+                                style="width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;background-color: {{ $feature->color }}1A;">
+                                <i class="{{ $feature->icon }}" style="color: {{ $feature->color }};"></i>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-semibold">{{ $feature->title }}</h5>
+                                <p class="card-text text-muted">{{ $feature->text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>00
+    </section>
+
+    <section class="py-5 my-2">
+        <div class="container py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-md-6 mb-4">
+                    <h3 class="fw-bold mb-4 text-dark ">عن المنتج {{ $lofy->name }}</h3>
+                    <div class="pe-5" style="font-size: x-large">
+                        <p>
+                            لوفي بيبي هو منتج العناية الفاخرة الذي يجمع بين أعلى معايير الجودة وراحة الطفل.
+                            تم تصميمه للأطفال الذين يحتاجون إلى حماية إضافية، نعومة فائقة، وقدرة امتصاص طويلة تدوم
+                            لساعات.
+                            بفضل تقنيات الامتصاص الحديثة والحواف المانعة للتسرب، يوفر لوفي بيبي راحةً كاملة ويمنح طفلك
+                            حرية
+                            الحركة دون أي قلق.
+                        </p>
+
+                        <p style="font-weight: bolder">
+                            لوفي بيبي هو الخيار الأول للأمهات الباحثات عن الجودة الممتازة.
+                        </p>
+                    </div>
+
+
                 </div>
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-semibold">{{ $feature->title }}</h5>
-                    <p class="card-text text-muted">{{ $feature->text }}</p>
+                <div class="col-md-6">
+                    <img src="{{ asset('images/photo3.png') }}" alt="صورة منتجات لوفي بيبي" class="img-fluid w-100"
+                        style="max-height: 500px; opacity: 0.8;">
                 </div>
             </div>
         </div>
-        @endforeach
-    </div>
-</div>
-</section>
+    </section>
 
-<section class="py-5 my-2">
-    <div class="container py-5">
-        <div class="row align-items-center g-4">
-            <div class="col-md-6 mb-4">
-                <h3 class="fw-bold mb-4 text-dark">لماذا تختار {{ $lofy->name }}؟</h3>
-                <ul class="features-list">
-                    <li><span class="check-icon">✔</span> تصميم T مرن</li>
-                    <li><span class="check-icon">✔</span> إمتصاص فائق</li>
-                    <li><span class="check-icon">✔</span> سطح داخلي قطني ناعم</li>
-                    <li><span class="check-icon">✔</span> حاجز تسريب مزدوج (Double lock)</li>
-                    <li><span class="check-icon">✔</span> اذان مطاطية جانبية</li>
-                </ul>
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">{{ $lofy->name }}</h3>
+                <h6 class="text-muted">اختر المقاس المناسب لطفلك من مجموعتنا المتنوعة</h6>
             </div>
-            <div class="col-md-6">
-                <img src="{{ asset('images/photo3.png') }}" alt="صورة منتجات لوفي بيبي"
-                     class="img-fluid w-100" style="max-height: 500px; opacity: 0.8;">
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="py-5">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h3 class="fw-bold">{{ $lofy->name }}</h3>
-            <h6 class="text-muted">اختر المقاس المناسب لطفلك من مجموعتنا المتنوعة</h6>
-        </div>
-
-                   <div class="row justify-content-center my-4 text-center">
+            <div class="row justify-content-center my-4 text-center">
                 @foreach ($lofy->products as $product)
-                      <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
                         <button wire:click="filterBySize('{{ $product->size }}')"
                             class="custom-btn btn w-100 border rounded-3 py-3 px-3 fw-semibold
                                    {{ $selectedSize === $product->size ? 'btn-dark text-white' : 'btn-outline-light text-black' }}">
@@ -72,7 +82,7 @@
                 </div>
             </div>
 
-         <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify-content-center">
                 @forelse($products as $product)
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <a href="{{ route('products.show', ['type' => $product->type, 'id' => $product->id]) }}"
@@ -92,5 +102,6 @@
                     <p class="text-center text-muted">لا توجد منتجات لهذا المقاس.</p>
                 @endforelse
             </div>
-    </div>
-</section></div>
+        </div>
+    </section>
+</div>

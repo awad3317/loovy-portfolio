@@ -203,13 +203,15 @@
             </ul>
             <div class="tab-content p-4 border-start border-end border-bottom rounded-bottom" id="myTabContent">
                 <div class="tab-pane fade show active" id="details" role="tabpanel">
-                    <h4 style="color: #2b3b6b">حفاضات الأطفال صيفي الوائدة</h4>
-                    <ul class="feature-list">
-                        <li>تصميم PPP وPPP آامون</li>
-                        <li>تنظيم أفضل وسطح ناعم</li>
-                        <li>وتشغيل ناعم</li>
-                        <li>حماية إضافية من التسرب</li>
-                    </ul>
+                    <h4 style="color: #2b3b6b">حفاضات الأطفال صيفي الرائعة</h4>
+                    @if ($product->details)
+                        <ul class="feature-list">
+                            @foreach ($product->details as $detail)
+                                <li>{{ $detail }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+
                 </div>
                 <div class="tab-pane fade" id="specs" role="tabpanel">
                     <div class="row">

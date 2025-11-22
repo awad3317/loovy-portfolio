@@ -8,9 +8,11 @@ class Product extends Model
 {
     protected $casts = [
         'images' => 'array',
+        'details' => 'array',
+
     ];
 
-    protected $fillable = ['brand_id', 'name', 'image', 'images', 'description', 'size', 'weight', 'type'];
+    protected $fillable = ['brand_id', 'name', 'image', 'images', 'description', 'size', 'weight', 'type', 'details'];
 
     public function brand()
     {
