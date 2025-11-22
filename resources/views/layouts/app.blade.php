@@ -51,15 +51,7 @@
     <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
     <meta name="msapplication-TileImage" content="{{ asset('favicons/favicon-96x96.png') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "شركة المصنع الأول للصناعات الصحية",
-  "url": "https://1st-factory.com",
-  "logo": "https://1st-factory.com/images/logo.png"
-}
-</script>
+
 
     <!-- CSS الحرجة -->
     <style>
