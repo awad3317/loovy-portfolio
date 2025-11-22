@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 use App\Models\{Brand, Feature, Product, Branch, Country};
 
 class DatabaseSeeder extends Seeder
@@ -294,5 +296,10 @@ class DatabaseSeeder extends Seeder
         foreach ($Branchs as $branch) {
             Branch::create($branch);
         }
+        User::create([
+            'name' => 'seleh',
+            'email' => 'seleh@gmail.com',
+            'password' => Hash::make('123'),
+        ]);
     }
 }
