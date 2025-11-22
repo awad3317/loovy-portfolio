@@ -64,9 +64,7 @@
                 padding-bottom: 2rem !important;
             }
 
-            body {
-                padding-top: 90px !important;
-            }
+        
 
         }
     </style>
