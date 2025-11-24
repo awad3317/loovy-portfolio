@@ -1,6 +1,17 @@
 <div>
     <style>
-        /* تبويبات الفروع */
+        /* ================== عام ================== */
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ================== تبويبات الفروع ================== */
+
         .nav-tabs .nav-link.active {
             background-color: #253E69 !important;
             color: white !important;
@@ -10,27 +21,57 @@
             color: #253E69 !important;
         }
 
-        /* الصور */
+        /* ================== الصور ================== */
+
         img {
             max-width: 100%;
             height: auto !important;
+            display: block;
         }
 
         /* صور الأقسام */
+
         .about-image img,
-        .quality-image img {
-            width: 100%;
-            object-fit: cover;
-        }
+      /* إصلاح كروت الشهادات في الموبايل */
+@media (max-width: 768px) {
+
+    /* ثبّت حجم ومسافة الأيقونة */
+    .quality-image + .col-lg-6 .card i {
+        min-width: 40px;
+        font-size: 22px;
+        margin-top: 5px;
+    }
+
+    /* وسّع النص وخفف حجمه قليلاً */
+    .quality-image + .col-lg-6 .card h5 {
+        font-size: 15px;
+        line-height: 1.4;
+        margin-bottom: 6px;
+    }
+
+    .quality-image + .col-lg-6 .card p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /* لا تسمح بضغط العناصر */
+    .quality-image + .col-lg-6 .card .d-flex {
+        flex-wrap: nowrap !important;
+        align-items: flex-start !important;
+    }
+}
+
 
         /* كرت المنتج */
+
         .product-card-img {
             object-fit: contain;
             max-height: 200px;
             width: 100%;
         }
 
-        /* محتوى تبويبات الفروع */
+        /* ================== تبويبات الفروع ================== */
+
         .branches-tab-content {
             max-height: none !important;
             overflow-y: visible !important;
@@ -38,172 +79,265 @@
             padding-bottom: 15px;
         }
 
-        /* خريطة الفروع */
+        /* ================== الخريطة ================== */
+
         .branches-map-wrapper {
             height: auto !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
         }
 
-        .branches-map-wrapper iframe {
-            width: 100%;
+        #map {
+            width: 100% !important;
             height: 450px;
         }
 
+        /* ================== الهيرو ================== */
 
-        /* موبايل */
+        .hero-section {
+            background-image: url('{{ asset('images/Rectangle.png') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 80vh;
+            position: relative;
+        }
+
+        .hero-section>.container {
+            max-width: 100% !important;
+        }
+
+        /* إصلاح الـ fixed bottom bar */
+
+        .d-lg-none.fixed-bottom {
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        /* لا نضع padding على body حتى لا يظهر فراغ */
+        body {
+            padding-bottom: 0 !important;
+        }
+
+        /* =================================================== */
+        /* ================== الموبايل فقط ================== */
+        /* =================================================== */
+
         @media (max-width: 768px) {
-            .branches-map-wrapper iframe {
-                height: 300px !important;
+
+            /* التعويض أسفل المحتوى بدل body */
+            main {
+                padding-bottom: 65px !important;
             }
 
+            /* الهيرو */
+            .hero-section {
+                min-height: auto !important;
+                padding-bottom: 40px;
+            }
+
+            /* صورة الهيرو */
+            .intro-image img {
+                max-height: 260px !important;
+                margin-top: 25px;
+            }
+
+            /* المنتج */
             .product-card-img {
-                max-height: 160px;
+                max-height: 160px !important;
             }
 
+            /* الخريطة */
+            #map {
+                height: 260px !important;
+            }
+
+            /* صندوق الفروع */
+            .branches-tab-content>div>div {
+                max-height: 300px !important;
+                overflow-y: auto !important;
+            }
+
+            /* مسافات */
             .py-5 {
                 padding-top: 2rem !important;
                 padding-bottom: 2rem !important;
             }
 
-        
+            .row {
+                text-align: center;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
 
+            .intro-text {
+                text-align: center !important;
+            }
+
+            /* شريط التنقل السفلي */
+            @media (max-width: 768px) {
+
+                .d-lg-none.fixed-bottom {
+                    height: 70px !important;
+                    padding-top: 6px !important;
+                }
+
+                main {
+                    padding-bottom: 80px !important;
+                    /* بدل 65px */
+                }
+            }
+
+            /* الفوتر */
+            footer {
+                margin-bottom: 0 !important;
+                padding-bottom: 15px !important;
+            }
+        }
+
+        /* ================== التابلت ================== */
+
+        @media (max-width: 992px) and (min-width: 769px) {
+
+            #map {
+                height: 350px;
+            }
+
+            .intro-image img {
+                max-height: 350px;
+            }
         }
     </style>
-       <nav class="navbar navbar-expand-lg" style="background-color: #d3d8e1;" >
-            <div class="container-fluid d-flex align-items-center">
 
-                {{-- الشعار --}}
-                <a class="ms-1 justify-content-start" href="#" style="z-index: 1050;">
-                    <img src="{{ asset('images/logo.png') }}" alt="شعار الشركة" width="100">
-                </a>
 
-                {{-- قائمة الديسكتوب --}}
-                <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navContent">
-                    <ul class="navbar-nav d-flex flex-row gap-5 rounded-5 px-5 py-3"
-                        style="
+    <nav class="navbar navbar-expand-lg" style="background-color: #d3d8e1;">
+        <div class="container-fluid d-flex align-items-center">
+
+            {{-- الشعار --}}
+            <a class="ms-1 justify-content-start" href="#" style="z-index: 1050;">
+                <img src="{{ asset('images/logo.png') }}" alt="شعار الشركة" width="100">
+            </a>
+
+            {{-- قائمة الديسكتوب --}}
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navContent">
+                <ul class="navbar-nav d-flex flex-row gap-5 rounded-5 px-5 py-3"
+                    style="
                         background-color: rgba(43, 59, 107, 0.85); 
                         backdrop-filter: blur(8px); 
                         width: auto;
-                        max-width: 95%;
                         box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                         border: 1px solid rgba(255,255,255,0.1);
                     ">
 
-                        <li class="nav-item px-1">
-                            <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/') ? 'active-nav-item' : '' }}"
-                                href="/">الرئيسية</a>
-                        </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-white fw-semibold fs-5 {{ request()->is('/') ? 'active-nav-item' : '' }}"
+                            href="/">الرئيسية</a>
+                    </li>
 
-                        <li class="nav-item px-1">
-                            <a class="nav-link text-white fw-semibold fs-5" href="/about">عن الشركة</a>
-                        </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-white fw-semibold fs-5" href="/about">عن الشركة</a>
+                    </li>
 
-                        <li class="nav-item px-1 custom-dropdown">
-                            <a class="nav-link text-white fw-semibold fs-5" href="#" id="productsLink">
-                                منتجاتنا
-                            </a>
-                            <ul class="custom-dropdown-menu">
-                                <li><a class="custom-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
-                                <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
-                                <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
-                            </ul>
-                        </li>
+                    <li class="nav-item px-1 custom-dropdown">
+                        <a class="nav-link text-white fw-semibold fs-5" href="#" id="productsLink">
+                            منتجاتنا
+                        </a>
+                        <ul class="custom-dropdown-menu">
+                            <li><a class="custom-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
+                            <li><a class="custom-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
+                            <li><a class="custom-dropdown-item" href="/all_product">الكل</a></li>
+                        </ul>
+                    </li>
 
-                        <li class="nav-item px-1">
-                            <a class="nav-link text-white fw-semibold fs-5" href="/branches">فروعنا</a>
-                        </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-white fw-semibold fs-5" href="/branches">فروعنا</a>
+                    </li>
 
-                        <li class="nav-item px-1">
-                            <a class="nav-link text-white fw-semibold fs-5" href="/contact">تواصل معنا</a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-white fw-semibold fs-5" href="/contact">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
 
-                {{-- مكان للبحث أو أيقونة أخرى في اليمين --}}
-                <a class="me-1 justify-content-start" href="#" style="z-index: 1050;">
-                    {{-- <img src="{{asset('images/search.png')}}" alt="شعار الشركة" width="40"> --}}
-                </a>
+            {{-- مكان للبحث أو أيقونة أخرى في اليمين --}}
+            <a class="me-1 justify-content-start" href="#" style="z-index: 1050;">
+                {{-- <img src="{{asset('images/search.png')}}" alt="شعار الشركة" width="40"> --}}
+            </a>
 
-                {{-- قائمة الموبايل في الأسفل --}}
-                <div class="d-lg-none fixed-bottom py-2 px-2">
-                    <div class="container">
-                        <ul class="nav justify-content-between rounded-5 px-2 py-1"
-                            style="
+            {{-- قائمة الموبايل في الأسفل --}}
+            <div class="d-lg-none fixed-bottom py-2 px-2">
+                <div class="container">
+                    <ul class="nav justify-content-between rounded-5 px-2 py-1"
+                        style="
                             background-color: rgba(43, 59, 107, 0.85); 
                             backdrop-filter: blur(5px); 
                             max-width: 100%;
                             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                             border: 1px solid rgba(255,255,255,0.1);
                         ">
-                            <li class="nav-item" style="flex: 1; min-width: 0;">
-                                <a class="nav-link text-white text-center px-1" href="/"
-                                    style="font-size: clamp(10px, 2.5vw, 16px);">
-                                    <i class="fas fa-home d-block mx-auto mb-1"
-                                        style="font-size: clamp(12px, 3vw, 20px);"></i>
-                                    <small>الرئيسية</small>
-                                </a>
-                            </li>
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <a class="nav-link text-white text-center px-1" href="/"
+                                style="font-size: clamp(10px, 2.5vw, 16px);">
+                                <i class="fas fa-home d-block mx-auto mb-1"
+                                    style="font-size: clamp(12px, 3vw, 20px);"></i>
+                                <small>الرئيسية</small>
+                            </a>
+                        </li>
 
-                            <li class="nav-item" style="flex: 1; min-width: 0;">
-                                <a class="nav-link text-white text-center px-1" href="/about"
-                                    style="font-size: clamp(10px, 2.5vw, 16px);">
-                                    <i class="fas fa-info-circle d-block mx-auto mb-1"
-                                        style="font-size: clamp(12px, 3vw, 20px);"></i>
-                                    <small>عننا</small>
-                                </a>
-                            </li>
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <a class="nav-link text-white text-center px-1" href="/about"
+                                style="font-size: clamp(10px, 2.5vw, 16px);">
+                                <i class="fas fa-info-circle d-block mx-auto mb-1"
+                                    style="font-size: clamp(12px, 3vw, 20px);"></i>
+                                <small>عننا</small>
+                            </a>
+                        </li>
 
-                            <li class="nav-item" style="flex: 1; min-width: 0;">
-                                <div class="mobile-dropdown">
-                                    <a class="nav-link text-white text-center px-1" href="#"
-                                        style="font-size: clamp(10px, 2.5vw, 16px);">
-                                        <i class="fas fa-box-open d-block mx-auto mb-1"
-                                            style="font-size: clamp(12px, 3vw, 20px);"></i>
-                                        <small>منتجاتنا</small>
-                                    </a>
-                                    <ul class="mobile-dropdown-menu">
-                                        <li><a class="mobile-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
-                                        <li><a class="mobile-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
-                                        <li><a class="mobile-dropdown-item" href="/all_product">الكل</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="nav-item" style="flex: 1; min-width: 0;">
-                                <a class="nav-link text-white text-center px-1" href="/branches"
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <div class="mobile-dropdown">
+                                <a class="nav-link text-white text-center px-1" href="#"
                                     style="font-size: clamp(10px, 2.5vw, 16px);">
-                                    <i class="fas fa-map-marker-alt d-block mx-auto mb-1"
+                                    <i class="fas fa-box-open d-block mx-auto mb-1"
                                         style="font-size: clamp(12px, 3vw, 20px);"></i>
-                                    <small>فروعنا</small>
+                                    <small>منتجاتنا</small>
                                 </a>
-                            </li>
+                                <ul class="mobile-dropdown-menu">
+                                    <li><a class="mobile-dropdown-item" href="/lofyBaby">لوفي بيبي</a></li>
+                                    <li><a class="mobile-dropdown-item" href="/calmyBaby">كالمي بيبي</a></li>
+                                    <li><a class="mobile-dropdown-item" href="/all_product">الكل</a></li>
+                                </ul>
+                            </div>
+                        </li>
 
-                            <li class="nav-item" style="flex: 1; min-width: 0;">
-                                <a class="nav-link text-white text-center px-1" href="/contact"
-                                    style="font-size: clamp(10px, 2.5vw, 16px);">
-                                    <i class="fas fa-envelope d-block mx-auto mb-1"
-                                        style="font-size: clamp(12px, 3vw, 20px);"></i>
-                                    <small>تواصل</small>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <a class="nav-link text-white text-center px-1" href="/branches"
+                                style="font-size: clamp(10px, 2.5vw, 16px);">
+                                <i class="fas fa-map-marker-alt d-block mx-auto mb-1"
+                                    style="font-size: clamp(12px, 3vw, 20px);"></i>
+                                <small>فروعنا</small>
+                            </a>
+                        </li>
+
+                        <li class="nav-item" style="flex: 1; min-width: 0;">
+                            <a class="nav-link text-white text-center px-1" href="/contact"
+                                style="font-size: clamp(10px, 2.5vw, 16px);">
+                                <i class="fas fa-envelope d-block mx-auto mb-1"
+                                    style="font-size: clamp(12px, 3vw, 20px);"></i>
+                                <small>تواصل</small>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-
             </div>
-        </nav>
-    <section
-        style="
-        background-image: url('{{ asset('images/Rectangle.png') }}'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 80vh;
-        position: relative;
-    ">
- 
 
-     
-        <div class="container  pt-4">
+        </div>
+    </nav>
+    <section class="hero-section">
+
+
+
+        <div class="container-fluid px-3 px-md-5 pt-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 intro-text text-lg-start text-center" data-aos="fade-left" data-aos-duration="800"
                     data-aos-delay="200">
@@ -211,7 +345,8 @@
                     <p class="mt-3 mb-4 text-secondary">
                         نفخر بريادتنا في مجال الصناعات الصحيّة، ونسعى دائمًا إلى تقديم منتجات آمنة وموثوقة تلبي احتياجات
                         الأسرة الحديثة. نعمل على تطوير حلول مبتكرة تجمع بين الجودة العالية والمعايير الصحية الصارمة، مع
-                        استخدام أحدث التقنيات لضمان منتجات تُكسب عملاءنا الراحة والثقة. نؤمن بأن العناية تبدأ من التفاصيل،
+                        استخدام أحدث التقنيات لضمان منتجات تُكسب عملاءنا الراحة والثقة. نؤمن بأن العناية تبدأ من
+                        التفاصيل،
                         لذلك نحرص على أن تكون جميع منتجاتنا خيارًا يعتمد عليه في الحياة اليومية. </p>
                     <div class="d-lg-block d-flex justify-content-center">
                         <a href="/all_product">
@@ -569,7 +704,8 @@
                                                     </h5>
 
                                                     <div class="d-flex align-items-center mb-2 text-muted">
-                                                        <i class="fa-solid fa-location-dot text-dark ms-3 fs-5 me-2 "></i>
+                                                        <i
+                                                            class="fa-solid fa-location-dot text-dark ms-3 fs-5 me-2 "></i>
                                                         <span>{{ $branch->address }}</span>
                                                     </div>
 
@@ -597,7 +733,7 @@
                 <!-- قسم الخريطة -->
                 <div class="col-lg-6 text-center">
                     <div class="rounded-4 shadow-sm overflow-hidden branches-map-wrapper">
-                        <div id="map" style="height: 40rem; width: 100%;"></div>
+                        <div id="map"></div>
                     </div>
                 </div>
 
